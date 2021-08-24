@@ -12,5 +12,6 @@ Rails.application.routes.draw do
       resources :bids
       resources :asks
     end
+    resources :transactions, only: [:index, :show]
   end
 end
