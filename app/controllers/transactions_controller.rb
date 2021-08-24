@@ -11,9 +11,9 @@ class TransactionsController < ApplicationController
   end
 
   def create
-    @transaction = Transaction.new(transactions_params)
+    @transaction = Transaction.new(transaction_params)
     if @transaction.save
-      redirect_to my_transaction_path
+      redirect_to my_transactions_path
     else
       render :new
     end
@@ -25,7 +25,7 @@ class TransactionsController < ApplicationController
 
   def update
     @transaction.update(transactions_params)
-    redirect_to my_transaction_path
+    redirect_to my_transactions_path
   end
 
   private
