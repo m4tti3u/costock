@@ -1,1 +1,16 @@
 // Specific CSS for your home-page
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+
+.hero-title{
+  color: #038AD4;
+  font-weight: bold;
+  font-size: 64px;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.hero-paragraph{
+  color: #0369B4;
+  line-height: 40px;
+  font-size: 36px;
+}
