@@ -3,7 +3,7 @@ class NftsController < ApplicationController
   before_action :nft, only: [:show, :edit, :update, :destroy]
 
   def index
-    @nfts = Nfts.all
+    @nfts = Nft.all
   end
 
   def new
