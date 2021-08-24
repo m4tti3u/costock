@@ -1,2 +1,87 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+<div class="wrapper">
+
+  <div class="container-hero">
+
+    <div class="hero-container-text">
+      <h1 class="hero-title">Collecter. Échanger. Stocker.</h1>
+      <p class="hero-paragraph"> Investissez sur vos objets de collections préférés grace à la technologie NFT</p>
+      <button class="btn-stock" type="button" > Découvrez le stock </button>
+    </div>
+
+    <div class="hero-container-image">
+      <%= image_tag "sneakers.png", class: "sneakers-img"%>
+      <%= image_tag "ellipse.png", class: "ellipse-img"%>
+    </div>
+
+  </div>
+
+  <div class="collectibles-sub-title">
+    <p class="paragraphe-subtitle">Choisissez parmi nos</p>
+    <h2>Collectibles disponibles</h2>
+  </div>
+
+  <div class="grid-cards-collectibles">
+    <div class="card-collectible">
+      <h3>Sneakers</h3>
+    </div>
+
+    <div class="card-collectible">
+      <h3>Cards</h3>
+    </div>
+
+    <div class="card-collectible">
+      <h3>Watches</h3>
+    </div>
+  </div>
+
+  <div class="three-dots">
+    <div class="first-dot"></div>
+    <div class="second-dot"></div>
+    <div class="third-dot"></div>
+  </div>
+
+  <div class="brand-presentation">
+    <h2>Qu’est ce que c’est CoStock?</h2>
+    <p class="paragraphe-subtitle">C’est tellement simple</p>
+  </div>
+
+  <div class="grid-presentation">
+    <div class="grid-card">
+      <%= image_tag "social-biography.png"%>
+      <div class="text-presentation">
+        <h3>Créez votre compte</h3>
+        <p class="paragraphe-subtitle">Un compte gratuit vous permettra de stocker tous vos objets et d'y avoir accès à tout moment et depuis n'importe quel appareil</p>
+      </div>
+    </div>
+
+    <div class="grid-card">
+      <%= image_tag "profiling.png"%>
+      <div class="text-presentation">
+        <h3>Trouvez les objets collectibles </h3>
+        <p class="paragraphe-subtitle">Choisissez parmi notre collection les objets nft les plus intéressants, croyez-moi, nous en avons beaucoup !</p>
+      </div>
+    </div>
+
+
+     <div class="grid-card">
+      <%= image_tag "performance.png"%>
+      <div class="text-presentation">
+        <h3>Suivez le taux de change </h3>
+        <p class="paragraphe-subtitle">Suivez les nouveaux objets et restez au courant des derniers changements dans les taux de crypto-monnaie en un seul clic !</p>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="collectibles-sub-title">
+    <h2>Nous avons leur soutien</h2>
+    <p class="paragraphe-subtitle">Découvrez les avis de nos traders</p>
+  </div>
+
+  <div class="grid-card-advices">
+    <div class="card-advice"></div>
+    <div class="card-advice"></div>
+    <div class="card-advice"></div>
+  </div>
+
+</div>
