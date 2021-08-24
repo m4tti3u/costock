@@ -1,0 +1,2 @@
+class NftsController < ApplicationController
+end
