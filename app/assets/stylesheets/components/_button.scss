@@ -11,7 +11,7 @@
   padding: 10px 25px 10px 25px;
 }
 
-.btn-stock{
+.btn-stock {
   width: 250px;
   height: 55px;
   background-color: #038AD4;
@@ -21,4 +21,11 @@
   font-weight: bold;
   font-family: 'Montserrat', sans-serif;
   font-size: 21px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  &:hover {
+    text-decoration: none;
+    color: #FFFFFF;
+  }
 }
