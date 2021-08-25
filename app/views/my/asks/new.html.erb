@@ -1,6 +1,5 @@
-
 <div class="main-container">
-  <div class="bid-buy-form">
+  <div class="ask-sell-form">
 
       <div class="collectible-show-card">
         <h3> <%= @collectible.model %></h3>
@@ -10,17 +9,17 @@
       </div>
 
 
-      <div class="bid-buy-container">
+      <div class="ask-sell-container">
         <div class="div">
-          <%= simple_form_for [@nft, @bid],:url => my_nft_bids_path, :method => :post do |f| %>
-            <%= f.input :bid_price, placeholder: "My bid price", label: false %>
-            <%= f.button :submit, 'Place Bid', class: "btn-create-bid" %>
+          <%= simple_form_for [@nft, @ask],:url => my_nft_asks_path, :method => :post do |f| %>
+            <%= f.input :ask_price, placeholder: "My asked price", label: false %>
+            <%= f.button :submit, 'Place Ask', class: "btn-create-ask" %>
           <% end %>
         </div>
         <div class="div">
-          <%= simple_form_for [@nft, @bid],:url => my_nft_bids_path, :method => :post do |f| %>
-            <%= f.input :bid_price, placeholder: "Lowest Ask", label: false %>
-            <%= f.button :submit, 'Buy now', class: "btn-buy-now" %>
+          <%= simple_form_for [@nft, @ask],:url => my_nft_asks_path, :method => :post do |f| %>
+            <%= f.input :ask_price, placeholder: 'Highest Bid', label: false %>
+            <%= f.button :submit, 'Sell now', class: "btn-sell-now" %>
           <% end %>
         </div>
       </div>

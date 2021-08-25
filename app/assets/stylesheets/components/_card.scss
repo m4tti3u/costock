@@ -38,6 +38,7 @@ display: flex;
 
 }
 
+
 .card-collectibles-index {
   width: 340px;
   height: 440px;
@@ -64,5 +65,20 @@ display: flex;
   }
   p {
     color: #0369B4;
+
+.collectible-show-card {
+  background-color: white;
+  width: 100%;
+  text-align: center;
+  padding-top: 20px;
+
+  h3 {
+    font-weight: 700;
+  }
+  img {
+    width: 300px;
+  }
+  h6 {
+    font-weight: 700;
   }
 }
