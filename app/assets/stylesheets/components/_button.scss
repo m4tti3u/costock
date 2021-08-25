@@ -11,6 +11,7 @@
   padding: 10px 25px 10px 25px;
 }
 
+
 .btn-buy-bid, .btn-sell-ask {
   text-decoration: none !important;
   color: white;
@@ -43,5 +44,23 @@
 
   &:hover {
     background-color: rgb(174, 30, 11);
+
+.btn-stock {
+  width: 250px;
+  height: 55px;
+  background-color: #038AD4;
+  color: #FFFFFF;
+  border-radius: 10px;
+  border: none;
+  font-weight: bold;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 21px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  &:hover {
+    text-decoration: none;
+    color: #FFFFFF;
+
   }
 }

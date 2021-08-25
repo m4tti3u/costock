@@ -1,0 +1,39 @@
+.card-collectible{
+  width: 340px;
+  height: 440px;
+  display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+  // background-color: #0369B4;
+  // background: linear-gradient(#0369B4),
+  //           linear-gradient( #FFFFFF),
+  //           linear-gradient( rgba(255,255,255,1) );
+  background: linear-gradient(180.73deg, rgba(255, 255, 255, 0.2) 1.77%, rgba(255, 255, 255, 0.2) 96.38%),
+linear-gradient(152.95deg, #FFFFFF 14.72%, rgba(234, 247, 255, 0.613054) 51.04%, rgba(255, 255, 255, 0.07) 80.22%);
+  box-shadow: 0px 0px 70px 2px #044A7E1A;
+  border-radius: 22px;
+}
+
+.card-img{
+  margin-top: 100px;
+}
+
+.grid-card{
+  display: flex;
+  align-items: center;
+}
+
+.card-advice{
+  width: 360px;
+height: 364px;
+  background: #FFFFFF;
+box-shadow: 0px 20px 44px rgba(10, 17, 57, 0.08);
+border-radius: 15px;
+padding: 30px;
+display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+
+}
