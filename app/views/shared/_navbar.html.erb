@@ -31,6 +31,9 @@
             <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "dropdown-item" %>
           </div>
         </li>
+      <div class="user-name mx-5 mt-3">
+        <p class="user">Bienvenue, <br><%= current_user.username %></p>
+      </div>
       <% else %>
         <li class="nav-login mr-2">
           <%= link_to "Login", new_user_session_path, class: "btn-login" %>
@@ -40,8 +43,5 @@
         </li>
       <% end %>
     </ul>
-    <div class="user-name mx-5 mt-3">
-      <p class="user">Bienvenue, <br><%= current_user.username %></p>
-    </div>
   </div>
 </div>
