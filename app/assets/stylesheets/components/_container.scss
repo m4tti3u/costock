@@ -20,3 +20,12 @@
   align-items: center;
   text-align: center;
 }
+
+.banner-container-collectibles {
+  width: 800px;
+  height: 550px;
+  padding-right: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around
+}
