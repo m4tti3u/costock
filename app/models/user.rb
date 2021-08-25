@@ -8,4 +8,5 @@ class User < ApplicationRecord
   has_many :asks, dependent: :destroy
   has_many :nfts, dependent: :destroy
   has_many :collectibles, dependent: :destroy
+  has_one_attached :photo
 end
