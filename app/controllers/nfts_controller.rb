@@ -20,7 +20,7 @@ class NftsController < ApplicationController
   end
 
   def show
-    @nft = Nft.find(params[:id])
+    # @nft = Nft.find(params[:id])
   end
 
   def edit

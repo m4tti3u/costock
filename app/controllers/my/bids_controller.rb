@@ -1,6 +1,4 @@
-class My::Nfts::BidsController < ApplicationController
-before_action :find_bid, only: [ :show, :edit, :update, :destroy ]
-
+class My::BidsController < ApplicationController
 def index
     @bids = current_user.bids
   end
@@ -10,7 +8,7 @@ def index
 
   def new
     @bid = Bid.new
-    @nft = Nft.find(params[:id])
+    @nft = Nft.find(params[:nft_id])
   end
 
   def create
