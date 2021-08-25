@@ -11,16 +11,17 @@ def index
   def new
     @ask = Ask.new
     @nft = Nft.find(params[:nft_id])
+    @collectible = Collectible.find(@nft.collectible_id)
   end
 
   def create
     @ask = Ask.new(ask_params)
-    @nft = Nft.find(params[:id])
+    @nft = Nft.find(params[:nft_id])
     @ask.nft = @nft
     @ask.user = current_user
     @ask.progress = "pending"
     if @ask.save
-      redirect_to my_ask_path
+      redirect_to my_transactions_path
     else
       render :new
     end

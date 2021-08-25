@@ -9,6 +9,7 @@ def index
   def new
     @nft = Nft.find(params[:nft_id])
     @bid = Bid.new
+    @collectible = Collectible.find(@nft.collectible_id)
     @user = current_user
   end
 
