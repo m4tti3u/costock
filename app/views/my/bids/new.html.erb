@@ -1,3 +1,8 @@
-<%#= form_for(@things) do |f| %>
-<%= 'coucou' %>
-<%# end %>
+<div class="container">
+  <%= simple_form_for [@nft, @bid],:url => my_nft_bids_path, :method => :post do |f| %>
+    <%= f.input :bid_price %>
+    <%= f.button :submit %>
+  <% end %>
+
+  <%= link_to 'Buy NFT now', '#', :data => {:confirm => 'Are you sure?'} %>
+</div>

@@ -1,0 +1,19 @@
+<div class="container">
+  <div class="ask-cell-form">
+
+      <div class="collectible-show-card">
+        <h1> <%= @nft.id %> </h1>
+      </div>
+
+
+      <div class="ask-sell-container">
+        <%= simple_form_for [@nft, @ask],:url => my_nft_asks_path, :method => :post do |f| %>
+          <%= f.input :ask_price %>
+          <%= f.button :submit %>
+        <% end %>
+        <%= link_to 'Sell NFT now', '#', :data => {:confirm => 'Are you sure?'} %>
+      </div>
+
+  </div>
+
+</div>
