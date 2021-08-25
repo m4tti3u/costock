@@ -1,11 +1,39 @@
-<h1> <%= @collectible.model %> </h1>
-<p><%= @collectible.brand %> </p>
-<p><%= @collectible.description %> </p>
-<p><%= @collectible.retail_price %> </p>
-<p><%= @collectible.resell_value %> </p>
-<p><%= @collectible.nft_number %> NFT available </p>
+<div class="container">
 
-<%= link_to 'Buy',  new_my_nft_bid_path(@nfts.first) %>
-<%= link_to 'Ask', "#" %>
-<%= link_to 'Bid',  new_my_nft_bid_path(@nfts.first) %>
-<%= link_to 'Sell',  "#" %>
+  <div class="collectible-show-container">
+    <div class="collectible-show-card">
+      <h1> <%= @collectible.model %> </h1>
+      <p><%= @collectible.brand %> </p>
+      <p><%= @collectible.description %> </p>
+      <p><%= @collectible.retail_price %> </p>
+      <p><%= @collectible.resell_value %> </p>
+      <p><%= @collectible.nft_number %> NFT available </p>
+    </div>
+
+
+
+    <div class="buy-sell-container">
+      <div class="buy-container">
+        <div class="buy-bid">
+          <%= link_to 'Buy',  new_my_nft_bid_path(@nfts.first), class: "btn-buy-bid" %>
+          <%= link_to 'or Bid',  new_my_nft_bid_path(@nfts.first), class: "btn-buy-bid" %>
+        </div>
+        <div class="lowest-ask">
+          <p>Lowest Ask : €</p>
+        </div>
+      </div>
+
+      <div class="sell-container">
+        <div class="ask-cell">
+          <%= link_to 'Sell',  new_my_nft_ask_path(@nfts.first), class: "btn-sell-ask" %>
+          <%= link_to 'or Ask', new_my_nft_ask_path(@nfts.first), class: "btn-sell-ask" %>
+        </div>
+        <div class="highest-bid">
+          <p>Highest Bid : €</p>
+        </div>
+      </div>
+    </div>
+
+
+  </div>
+</div>

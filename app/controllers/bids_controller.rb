@@ -6,9 +6,6 @@ class BidsController < ApplicationController
     #@bid = Bid.find(params[:id])
   #end
 
-  def new
-    @bid = Bid.new
-  end
 
   def update
     @bid = Bid.find(params[:id])

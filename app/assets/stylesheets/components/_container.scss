@@ -8,3 +8,38 @@
   width: 900px;
   height: 550px;
 }
+
+.collectible-show-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.buy-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.sell-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.buy-sell-container {
+  border: 1px solid #002d4d;
+  border-radius: 2px;
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  text-align: center;
+  height: 250px;
+  align-items: center;
+  justify-content: center;
+}
+
+.ask-cell-form {
+  display: flex;
+  justify-content: space-evenly;
+  padding: 12px;
+  margin: 12px;
+}
