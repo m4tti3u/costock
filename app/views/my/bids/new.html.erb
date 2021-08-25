@@ -1,8 +1,30 @@
-<div class="container">
-  <%= simple_form_for [@nft, @bid],:url => my_nft_bids_path, :method => :post do |f| %>
-    <%= f.input :bid_price %>
-    <%= f.button :submit %>
-  <% end %>
 
-  <%= link_to 'Buy NFT now', '#', :data => {:confirm => 'Are you sure?'} %>
+<div class="main-container">
+  <div class="bid-buy-form">
+
+      <div class="collectible-show-card">
+        <h3> <%= @collectible.model %></h3>
+        <p><%= @collectible.reference %></p>
+        <h6>Highest Bid: <%= @nft.bids %> € | Lowest Ask: <%= @nft.asks %> €</h6>
+        <img src="https://images.stockx.com/images/adidas-Yeezy-Foam-RNNR-Ochre-Product.jpg?fit=fill&bg=FFFFFF&w=700&h=500&auto=format,compress&q=90&dpr=2&trim=color&updated_at=1629818202" alt="">
+      </div>
+
+
+      <div class="bid-buy-container">
+        <div class="div">
+          <%= simple_form_for [@nft, @bid],:url => my_nft_bids_path, :method => :post do |f| %>
+            <%= f.input :bid_price, placeholder: "My bid price", label: false %>
+            <%= f.button :submit, 'Place Bid', class: "btn-create-bid" %>
+          <% end %>
+        </div>
+        <div class="div">
+          <%= simple_form_for [@nft, @bid],:url => my_nft_bids_path, :method => :post do |f| %>
+            <%= f.input :bid_price, placeholder: "Lowest Ask", label: false %>
+            <%= f.button :submit, 'Buy now', class: "btn-buy-now" %>
+          <% end %>
+        </div>
+      </div>
+
+  </div>
+
 </div>

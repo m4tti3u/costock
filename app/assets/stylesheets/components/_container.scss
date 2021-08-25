@@ -47,11 +47,29 @@
   height: 250px;
   align-items: center;
   justify-content: center;
+  width: 100%;
 }
 
-.ask-cell-form {
+.ask-sell-form, .bid-buy-form {
   display: flex;
-  justify-content: space-evenly;
-  padding: 12px;
-  margin: 12px;
+  justify-content: center;
+  width: 100%;
+  height: 100vh;
+
+}
+
+.bid-buy-container, .ask-sell-container {
+  width: 100%;
+  text-align: center;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+
+  .div{
+    margin-top: 24px;
+    background-color: white;
+    height: 150px;
+    padding: 20px;
+
+  }
 }

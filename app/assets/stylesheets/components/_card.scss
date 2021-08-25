@@ -37,3 +37,20 @@ display: flex;
     align-items: flex-start;
 
 }
+
+.collectible-show-card {
+  background-color: white;
+  width: 100%;
+  text-align: center;
+  padding-top: 20px;
+
+  h3 {
+    font-weight: 700;
+  }
+  img {
+    width: 300px;
+  }
+  h6 {
+    font-weight: 700;
+  }
+}
