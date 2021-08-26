@@ -4,13 +4,27 @@
     <div class="banner-container-collectibles">
       <h1 class="banner-title">Sneakers</h1>
       <h2 class="banner-title-h2">Trouvez l'objet rare et intéressant dont vous avez besoin</h2>
+      <div class="search-container">
+        <%= form_tag collectibles_path, method: :get do %>
+          <div class="d-flex justify-content-center my-5">
+            <%= text_field_tag :query,
+              params[:query],
+              class: "form-control input-text rounded-search-form",
+              placeholder: "Trouve un objet 😎 "
+            %>
+            <i class="fas fa-search"></i>
+          </div>
+        <% end %>
+      </div>
     </div>
 
     <div class="banner-collectibles-image">
       <%= image_tag "image-sneakers-banner.png", class: "image-snkrs-banner" %>
       <%= image_tag "ellipse.png", class: "ellipse-img"%>
     </div>
+
   </div>
+
 
 
   <div class="collectibles-grid">
