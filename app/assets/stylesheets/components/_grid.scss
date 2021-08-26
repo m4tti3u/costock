@@ -1,10 +1,8 @@
 .grid-card{
   display: grid;
     grid-template-columns: repeat(3, 1fr);
-    margin-left: 100px;
     margin-top: 80px;
     margin-bottom: 80px;
-
 }
 .grid-presentation{
   display: grid;
