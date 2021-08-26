@@ -1,7 +1,7 @@
 .avatar-large {
   width: 56px;
   border-radius: 50%;
- display: flex;
+  display: flex;
   align-items: center;
 
 }
@@ -14,39 +14,12 @@
 
 }
 
-
 .nft-list-transaction{
- overflow: hidden;
+  overflow: hidden;
   height: 80px;
   background: white;
   box-shadow: 0 10px 15px rgba(0,0,0,0.2);
   display: flex;
   justify-content: space-between;
   align-items: center;
-}
-
-.nft-category-card {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  .avatar-large {
-    size: 12px;
-  }
-}
-///
-
-.btn-transaction {
-  color: #4A4A4A;
-  border: 1px solid #4A4A4A;
-  padding: 8px 24px;
-  border-radius: 50px;
-  font-weight: lighter;
-  opacity: 0.6;
-  transition: opacity 0.3s ease;
-  display: grid;
-
-}
-
-.btn-ghost:hover {
-  opacity: 1;
 }
