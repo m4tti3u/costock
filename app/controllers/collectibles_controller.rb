@@ -3,6 +3,9 @@ class CollectiblesController < ApplicationController
 
   def index
     @collectibles = Collectible.all
+    if params[:query].present?
+      @collectibles = Collectible.search_by_brand_and_model(params[:query])
+    end
   end
 
   def show
