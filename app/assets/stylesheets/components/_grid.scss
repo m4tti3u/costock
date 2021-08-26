@@ -1,14 +1,14 @@
 .grid-card{
   display: grid;
     grid-template-columns: repeat(3, 1fr);
-    margin-top: 80px;
-    margin-bottom: 80px;
 }
 .grid-presentation{
   display: grid;
     grid-template-columns: 1200px;
     justify-content: center;
     grid-template-rows: 500px;
+    margin-top: 80px;
+    margin-bottom: 80px;
 }
 
 .collectibles-grid {
