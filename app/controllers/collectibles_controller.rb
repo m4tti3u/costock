@@ -6,7 +6,8 @@ class CollectiblesController < ApplicationController
   end
 
   def show
-    @collectible = Collectible.find(params[:id])
-    @nfts = Nft.where(collectible_id: @collectible.id)
+    @collectible = Collectible.includes(:nfts, :asks, :bids).find(params[:id])
+    @ask = Ask.new
+    @bid = Bid.new
   end
 end

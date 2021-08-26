@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_08_25_093257) do
+ActiveRecord::Schema.define(version: 2021_08_26_125903) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -37,24 +37,24 @@ ActiveRecord::Schema.define(version: 2021_08_25_093257) do
   end
 
   create_table "asks", force: :cascade do |t|
-    t.bigint "nft_id", null: false
     t.bigint "user_id", null: false
     t.float "ask_price"
     t.string "progress"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.index ["nft_id"], name: "index_asks_on_nft_id"
+    t.bigint "collectible_id"
+    t.index ["collectible_id"], name: "index_asks_on_collectible_id"
     t.index ["user_id"], name: "index_asks_on_user_id"
   end
 
   create_table "bids", force: :cascade do |t|
-    t.bigint "nft_id", null: false
     t.bigint "user_id", null: false
     t.float "bid_price"
     t.string "progress"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.index ["nft_id"], name: "index_bids_on_nft_id"
+    t.bigint "collectible_id"
+    t.index ["collectible_id"], name: "index_bids_on_collectible_id"
     t.index ["user_id"], name: "index_bids_on_user_id"
   end
 
@@ -128,9 +128,9 @@ ActiveRecord::Schema.define(version: 2021_08_25_093257) do
   end
 
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
-  add_foreign_key "asks", "nfts"
+  add_foreign_key "asks", "collectibles"
   add_foreign_key "asks", "users"
-  add_foreign_key "bids", "nfts"
+  add_foreign_key "bids", "collectibles"
   add_foreign_key "bids", "users"
   add_foreign_key "collectibles", "users"
   add_foreign_key "nfts", "collectibles"
