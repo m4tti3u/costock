@@ -14,3 +14,40 @@
   line-height: 40px;
   font-size: 36px;
 }
+.subtitle{
+  color: #044A7E;
+  font-weight: bold;
+  font-size: 36px;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.paragraphe-subtitle{
+  color: #0369B4;
+  font-size: 24px;
+  font-family: 'Montserrat', sans-serif;
+  line-height: 30px;
+  margin-top: 50px;
+}
+
+.card-title{
+  color: #0369B4;
+  font-weight: 600;
+  font-size: 36px;
+  font-family: 'Montserrat', sans-serif;
+  margin-bottom: 50px;
+}
+.title-presentation{
+  color: #038AD4;
+  font-weight: bold;
+  font-size: 32px;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.text-presentation{
+  text-align: end;
+  grid-area: 1/2/1/4;
+}
+
+.text-presentation-middle{
+  grid-area: 1/1/1/3;
+}

@@ -1,6 +1,4 @@
-class My::Nfts::BidsController < ApplicationController
-before_action :find_bid, only: [ :show, :edit, :update, :destroy ]
-
+class My::BidsController < ApplicationController
 def index
     @bids = current_user.bids
   end
@@ -9,18 +7,20 @@ def index
   end
 
   def new
+    @nft = Nft.find(params[:nft_id])
     @bid = Bid.new
-    @nft = Nft.find(params[:id])
+    @collectible = Collectible.find(@nft.collectible_id)
+    @user = current_user
   end
 
   def create
+    @nft = Nft.find(params[:nft_id])
     @bid = Bid.new(bid_params)
-    @nft = Nft.find(params[:id])
     @bid.nft = @nft
     @bid.user = current_user
     @bid.progress = "pending"
     if @bid.save
-      redirect_to my_bid_path
+      redirect_to my_transactions_path
     else
       render :new
     end

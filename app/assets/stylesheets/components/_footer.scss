@@ -6,16 +6,28 @@
   // align-items: flex-end;
   // justify-content: space-between;
   flex-direction: column;
-  height: 280px;
+  height: 380px;
   padding: 30px 50px;
   color: rgba(0,0,0,0.3);
+  position: relative;
 }
 
-.footer-links img {
-  width: 30px;
-  border-radius: 5px;
+.footer-links {
+  position: absolute;
+  bottom: 32px;
+  // img {
+  //   width: 30px;
+  //   border-radius: 5px;
+  // }
+}
+
+.footer a {
+  color: white;
+  font-size: 30px;
 }
 
 .footer-brand img{
-  width: 100px;
+  width: 120px;
+  position: absolute;
+  bottom: 100px;
 }

@@ -1,0 +1,29 @@
+<div class="main-container">
+  <div class="ask-sell-form">
+
+      <div class="collectible-show-card">
+        <h3> <%= @collectible.model %></h3>
+        <p><%= @collectible.reference %></p>
+        <h6>Highest Bid: <%= @nft.bids %> € | Lowest Ask: <%= @nft.asks %> €</h6>
+        <img src="https://images.stockx.com/images/adidas-Yeezy-Foam-RNNR-Ochre-Product.jpg?fit=fill&bg=FFFFFF&w=700&h=500&auto=format,compress&q=90&dpr=2&trim=color&updated_at=1629818202" alt="">
+      </div>
+
+
+      <div class="ask-sell-container">
+        <div class="div">
+          <%= simple_form_for [@nft, @ask],:url => my_nft_asks_path, :method => :post do |f| %>
+            <%= f.input :ask_price, placeholder: "My asked price", label: false %>
+            <%= f.button :submit, 'Place Ask', class: "btn-create-ask" %>
+          <% end %>
+        </div>
+        <div class="div">
+          <%= simple_form_for [@nft, @ask],:url => my_nft_asks_path, :method => :post do |f| %>
+            <%= f.input :ask_price, placeholder: 'Highest Bid', label: false %>
+            <%= f.button :submit, 'Sell now', class: "btn-sell-now" %>
+          <% end %>
+        </div>
+      </div>
+
+  </div>
+
+</div>

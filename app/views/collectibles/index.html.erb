@@ -1,0 +1,34 @@
+<div class="container">
+
+  <div class="container-hero">
+    <div class="banner-container-collectibles">
+      <h1 class="banner-title">Sneakers</h1>
+      <h2 class="banner-title-h2">Trouvez l'objet rare et intéressant dont vous avez besoin</h2>
+    </div>
+
+    <div class="banner-collectibles-image">
+      <%= image_tag "image-sneakers-banner.png", class: "image-snkrs-banner" %>
+      <%= image_tag "ellipse.png", class: "ellipse-img"%>
+    </div>
+  </div>
+
+
+  <div class="collectibles-grid">
+    <% @collectibles.each do |collectible| %>
+      <div class="card-collectibles-index">
+        <div class="card-top">
+          <%= cl_image_tag collectible.photo.key %>
+        </div>
+        <p class="text-center"><%= link_to collectible.model, collectible_path(collectible)  %></p>
+        <div class="d-flex justify-content-between w-100 px-3">
+          <p class="text-grey">Resell price :</p>
+          <p class="text-grey"><%= collectible.resell_value %></p>
+        </div>
+        <div class="d-flex justify-content-between w-100 px-3">
+          <p class="font-weight-bold">Prix Nft :</p>
+          <p ><%= collectible.resell_value.div(collectible.nft_number) %></p>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>
