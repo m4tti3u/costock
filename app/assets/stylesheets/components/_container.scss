@@ -28,12 +28,14 @@
 
 .banner-container-collectibles {
   width: 800px;
-  height: 550px;
+  height: 400px;
   padding-right: 50px;
-  display: flex;
+  // display: flex;
   flex-direction: column;
   justify-content: space-around;
+  margin-top: 100px;
 }
+
 
 .collectible-show-container {
   display: flex;
@@ -51,6 +53,7 @@
   justify-content: center;
   align-items: center;
 }
+
 .buy-sell-container {
   border: 1px solid #002d4d;
   border-radius: 2px;
@@ -85,5 +88,27 @@
     height: 150px;
     padding: 20px;
 
+  }
+}
+
+.search-container {
+  position: relative;
+  width: 80%;
+  .fa-search {
+    position: absolute;
+    top: 47%;
+    left: 10px;
+    transform: translateY(-50%);
+    font-size: 20px;
+  }
+  .input-text {
+    // width: 0px;
+    // border: 0px;
+    background-color: #fff;
+    padding: 30px 40px;
+    font-size: 20px;
+  }
+  .rounded-search-form {
+    border-radius: 50px;
   }
 }

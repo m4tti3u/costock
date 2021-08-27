@@ -123,3 +123,15 @@ nfts = Nft.create!([
   ])
 
 puts 'All good investors!'
+
+Bid.create!([
+  {collectible_id: "1", user_id: "1", bid_price: 100, progress: "pending"},
+  {collectible_id: "2", user_id: "1", bid_price: 80, progress: "pending"},
+  {collectible_id: "3", user_id: "2", bid_price: 60, progress: "pending"},
+  ])
+
+Ask.create!([
+  {collectible_id: "1", user_id: "2", bid_price: 20, progress: "pending"},
+  {collectible_id: "2", user_id: "4", bid_price: 40, progress: "pending"},
+  {collectible_id: "3", user_id: "1", bid_price: 30, progress: "pending"},
+  ])

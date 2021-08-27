@@ -1,20 +1,19 @@
 .grid-card{
   display: grid;
     grid-template-columns: repeat(3, 1fr);
-    margin-left: 100px;
-    margin-top: 80px;
-    margin-bottom: 80px;
-
 }
 .grid-presentation{
   display: grid;
     grid-template-columns: 1200px;
     justify-content: center;
     grid-template-rows: 500px;
+    margin-top: 80px;
+    margin-bottom: 80px;
 }
 
 .collectibles-grid {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-gap: 30px;
+  margin-bottom: 100px;
 }
