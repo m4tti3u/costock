@@ -1,5 +1,5 @@
 .avatar-large {
-  width: 56px;
+  width: 40px;
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -7,11 +7,10 @@
 }
 
 .side-navbar {
-  background-color: #C4C4C4;
+  background-color: #F4F4F4;
   position: sticky;
   height: 100vh;
   top: 0;
-
 }
 
 .nft-list-transaction{
@@ -22,4 +21,10 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+.nft-category-card{
+display: -webkit-inline-box;
+padding: inherit;
+margin: 15px 15px 0px 1px
 }
