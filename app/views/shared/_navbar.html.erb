@@ -24,7 +24,7 @@
           <% if current_user.photo.attached? %>
             <%= cl_image_tag current_user.photo.key, height: 40, width: 40, crop: :fill , class: "avatar dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
           <% else %>
-            <%= image_tag "matthieu.jpeg", height: 40, width: 40, class: "avatar dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
+            <%= cl_image_tag "matthieu_lloqq1", height: 40, width: 40, class: "avatar dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
           <% end %>
           <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
             <%= link_to "Mon Portefeuille", "/my/transactions", class: "dropdown-item" %>
