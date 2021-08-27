@@ -10,6 +10,8 @@ class CollectiblesController < ApplicationController
 
   def show
     @collectible = Collectible.includes(:nfts, :asks, :bids).find(params[:id])
+    @lowest_ask = @collectible.asks.lowest
+    @highest_bid = @collectible.bids.highest
     @ask = Ask.new
     @bid = Bid.new
   end
