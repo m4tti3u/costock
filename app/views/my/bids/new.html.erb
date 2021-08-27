@@ -5,8 +5,8 @@
       <div class="collectible-show-card">
         <h3> <%= @collectible.model %></h3>
         <p><%= @collectible.reference %></p>
-        <h6>Highest Bid: <%= @nft.bids %> € | Lowest Ask: <%= @nft.asks %> €</h6>
-        <img src="https://images.stockx.com/images/adidas-Yeezy-Foam-RNNR-Ochre-Product.jpg?fit=fill&bg=FFFFFF&w=700&h=500&auto=format,compress&q=90&dpr=2&trim=color&updated_at=1629818202" alt="">
+        <h6>Highest Bid: <%= @collectible.bids.highest_price.bid_price %> € | Lowest Ask: <%= @collectible.asks.lowest_price.ask_price %> €</h6>
+        <%= cl_image_tag @collectible.photo.key %>
       </div>
 
 

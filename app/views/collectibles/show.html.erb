@@ -8,32 +8,56 @@
       <p><%= @collectible.retail_price %> </p>
       <p><%= @collectible.resell_value %> </p>
       <p><%= @collectible.nft_number %> NFT available </p>
+      <%= cl_image_tag @collectible.photo.key %>
+      <%= link_to 'Retour',  collectibles_path , class: "btn" %>
+
     </div>
 
 
 
-    <div class="buy-sell-container">
-      <div class="buy-container">
-        <div class="buy-bid">
-          <%= link_to 'Buy',  new_my_nft_bid_path(@nfts.first), class: "btn-buy-bid" %>
-          <%= link_to 'or Bid',  new_my_nft_bid_path(@nfts.first), class: "btn-buy-bid" %>
+    <div id="accordion">
+      <div class="card">
+        <div class="card-header" id="headingOne">
+          <h5 class="mb-0">
+            <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+              <p>Lowest Ask : <%= @collectible.asks.lowest_price.ask_price %> €</p>
+            </button>
+          </h5>
         </div>
-        <div class="lowest-ask">
-          <p>Lowest Ask : €</p>
+        <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
+          <div class="card-body">
+            <%= simple_form_for @collectible.asks.lowest_price do |f| %>
+              <%#= f.input :ask_price, label: false %>
+              <%= f.button :submit, 'Buy', class: "btn-create-ask" %>
+            <% end %>
+            <%= simple_form_for [@collectible, @bid], :method => :post do |f| %>
+              <%= f.input :bid_price, placeholder: "My Bid price", label: false %>
+              <%= f.button :submit, 'Place Bid', class: "btn-create-ask" %>
+            <% end %>
+          </div>
         </div>
       </div>
-
-      <div class="sell-container">
-        <div class="ask-cell">
-          <%= link_to 'Sell',  new_my_nft_ask_path(@nfts.first), class: "btn-sell-ask" %>
-          <%= link_to 'or Ask', new_my_nft_ask_path(@nfts.first), class: "btn-sell-ask" %>
+      <div class="card">
+        <div class="card-header" id="headingTwo">
+          <h5 class="mb-0">
+            <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+              <p>Highest Bid : <%= @collectible.bids.highest_price.bid_price %> €</p>
+            </button>
+          </h5>
         </div>
-        <div class="highest-bid">
-          <p>Highest Bid : €</p>
+        <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+          <div class="card-body">
+            <%= simple_form_for @collectible.bids.highest_price do |f| %>
+              <%#= f.input :bid_price, label: false %>
+              <%= f.button :submit, 'Sell', class: "btn-create-ask" %>
+            <% end %>
+            <%= simple_form_for [@collectible, @ask], :method => :post do |f| %>
+              <%= f.input :ask_price, placeholder: "My Ask price", label: false %>
+              <%= f.button :submit, 'Place Ask', class: "btn-create-ask" %>
+            <% end %>
+          </div>
         </div>
       </div>
     </div>
-
-
   </div>
 </div>
