@@ -6,6 +6,7 @@
   width: 480px;
   height: 480px;
   left: 60%;
+  animation: float 5s ease-in-out infinite;
 }
 
 .image-snkrs-banner {
@@ -20,4 +21,23 @@
 
 .image-current-balance {
   border-radius: 10px;
+}
+
+@keyframes float {
+	0% {
+		transform: translatey(0px);
+	}
+	// 25% {
+	// 	transform: translatey(-100px);
+	// }
+	50% {
+		transform: translatey(-100px);
+    // transform: translatex(-100px);
+	}
+  // 75% {
+	// 	transform: translatey(150px);
+	// }
+  100% {
+		transform: translatey(0px);
+	}
 }
