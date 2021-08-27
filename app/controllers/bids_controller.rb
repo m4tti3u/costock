@@ -1,6 +1,6 @@
 class BidsController < ApplicationController
   skip_before_action :authenticate_user!, only: [:index, :show]
-  before_action :bids, only: [:show, :update]
+  # before_action :bids, only: [:show, :update]
 
   def create
     @bid = Bid.new(bids_params)
@@ -9,14 +9,31 @@ class BidsController < ApplicationController
     if @bid.save
       redirect_to my_transactions_path
     else
+      @collectible = @bid.collectible
+      @lowest_ask = @collectible.asks.lowest
+      @highest_bid = @collectible.bids.highest
+      @ask = Ask.new
+      @bid = Bid.new
       render "collectible/show"
     end
   end
 
   def update
     @bid = Bid.find(params[:id])
-    @bid.update(progress: 'done')
-    redirect_to my_transactions_path
+    @nft = Nft.where(collectible: @bid.collectible, user: current_user).first
+    if @nft.present? && @bid.update(progress: 'done')
+      @nft.update(user: @bid_user)
+      @transaction = Transaction.create(user: current_user, nft: @nft)
+      redirect_to my_transactions_path
+    else
+      flash[:alert] = 'Transaction impossible'
+      @collectible = @bid.collectible
+      @lowest_ask = @collectible.asks.lowest
+      @highest_bid = @collectible.bids.highest
+      @ask = Ask.new
+      @bid = Bid.new
+      render "collectibles/show"
+    end
   end
 
   private

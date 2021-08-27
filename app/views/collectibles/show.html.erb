@@ -16,20 +16,18 @@
 
 
     <div id="accordion">
-      <div class="card">
+      <% if @lowest_ask.present? && @lowest_ask.user != current_user %>
+           <div class="card">
         <div class="card-header" id="headingOne">
           <h5 class="mb-0">
             <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-              <p>Lowest Ask : <%= @collectible.asks.lowest_price.ask_price %> €</p>
+              <p>Lowest Ask : <%= @lowest_ask.ask_price %> €</p>
             </button>
           </h5>
         </div>
         <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
           <div class="card-body">
-            <%= simple_form_for @collectible.asks.lowest_price do |f| %>
-              <%#= f.input :ask_price, label: false %>
-              <%= f.button :submit, 'Buy', class: "btn-create-ask" %>
-            <% end %>
+            <%= render 'asks/form', ask: @lowest_ask %>
             <%= simple_form_for [@collectible, @bid], :method => :post do |f| %>
               <%= f.input :bid_price, placeholder: "My Bid price", label: false %>
               <%= f.button :submit, 'Place Bid', class: "btn-create-ask" %>
@@ -37,17 +35,21 @@
           </div>
         </div>
       </div>
+      <% else %>
+        <p>Mon futur bouton BID</p>
+      <% end %>
+      <% if @highest_bid.present? %>
       <div class="card">
         <div class="card-header" id="headingTwo">
           <h5 class="mb-0">
             <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-              <p>Highest Bid : <%= @collectible.bids.highest_price.bid_price %> €</p>
+              <p>Highest Bid : <%= @highest_bid.bid_price %> €</p>
             </button>
           </h5>
         </div>
         <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
           <div class="card-body">
-            <%= simple_form_for @collectible.bids.highest_price do |f| %>
+            <%= simple_form_for @highest_bid do |f| %>
               <%#= f.input :bid_price, label: false %>
               <%= f.button :submit, 'Sell', class: "btn-create-ask" %>
             <% end %>
@@ -58,6 +60,8 @@
           </div>
         </div>
       </div>
+      <% end %>
+
     </div>
   </div>
 </div>

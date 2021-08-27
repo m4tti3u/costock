@@ -1,6 +1,6 @@
 class AsksController < ApplicationController
   skip_before_action :authenticate_user!, only: [:index, :show]
-  before_action :asks, only: [:show, :update]
+  #before_action :asks, only: [:show, :update]
 
   def create
     @ask = Ask.new(asks_params)
@@ -9,16 +9,31 @@ class AsksController < ApplicationController
     if @ask.save
       redirect_to my_transactions_path
     else
-      render "collectible/show"
+      @collectible = @ask.collectible
+      @lowest_ask = @collectible.asks.lowest
+      @highest_bid = @collectible.bids.highest
+      @ask = Ask.new
+      @bid = Bid.new
+      render "collectibles/show"
     end
   end
 
   def update
     @ask = Ask.find(params[:id])
-    #@transaction = Transaction.new(user: current_user, )
-    @ask.update(progress: 'done')
-    redirect_to my_transactions_path
-
+    @nft = Nft.where(collectible: @ask.collectible, user: @ask.user).first
+    if @nft.present? && @ask.update(progress: 'done')
+      @nft.update(user: current_user)
+      @transaction = Transaction.create(user: current_user, nft: @nft)
+      redirect_to my_transactions_path
+    else
+      flash[:alert] = 'Transaction impossible'
+      @collectible = @ask.collectible
+      @lowest_ask = @collectible.asks.lowest
+      @highest_bid = @collectible.bids.highest
+      @ask = Ask.new
+      @bid = Bid.new
+      render "collectibles/show"
+    end
   end
 
   private
