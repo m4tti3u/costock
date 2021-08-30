@@ -26,4 +26,24 @@ class CollectiblesController < ApplicationController
     @ask = Ask.new
     @bid = Bid.new
   end
+
+  def new
+    @collectible = Collectible.new
+  end
+
+  def create
+    @collectible = collectible.new(collectibles_params)
+    @collectible.user = current_user
+    if @collectible.save
+      redirect_to new_collectible_path(@collectible)
+    else
+      render :new
+    end
+  end
+
+  private
+
+  def collectibles_params
+    params.require(:collectible).permit(:category, :brand, :model, :reference, :retail_price, :resell_value, :description, :user_id, :nft_number)
+  end
 end
