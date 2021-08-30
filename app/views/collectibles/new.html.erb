@@ -1,0 +1,56 @@
+<div class="container-new-collectibles">
+  <div class="banner-new-collectible">
+    <h1 class="hero-title my-5">Vendez votre collectible.</h1>
+    <%= link_to "Vendez", "#buy-your-collectible", class: "btn-sell-my-collectible" %>
+  </div>
+</div>
+
+<div class="grid-presentation">
+  <div class="grid-card">
+    <%= image_tag "delivery_address.svg", class: "collectible-new-image" %>
+    <div class="text-presentation">
+      <h3 class="title-presentation">Envoyer votre produit</h3>
+      <p class="paragraphe-subtitle">Un compte gratuit vous permettra de stocker tous vos objets et d'y avoir accès à tout moment et depuis n'importe quel appareil</p>
+      <%= image_tag "ellipse.png", class: "ellipse-img"%>
+    </div>
+  </div>
+
+  <div class="grid-card">
+    <div class="text-presentation-middle">
+      <h3 class="title-presentation">A la réception de votre produit on procédera à l'authentification</h3>
+      <p class="paragraphe-subtitle">Choisissez parmi notre collection les objets nft les plus intéressants, croyez-moi, nous en avons beaucoup !</p>
+    </div>
+    <%= image_tag "product_photography.svg", class: "collectible-new-image" %>
+  </div>
+
+
+    <div class="grid-card mt-5">
+    <%= image_tag "ellipse.png", class: "ellipse-img ellipse-left"%>
+    <%= image_tag "online_payments.svg", class: "collectible-new-image" %>
+    <div class="text-presentation">
+      <h3 class="title-presentation">On attribuera un nombre de NFT a votre objet </h3>
+      <p class="paragraphe-subtitle">Suivez les nouveaux objets et restez au courant des derniers changements dans les taux de crypto-monnaie en un seul clic !</p>
+    </div>
+  </div>
+</div>
+
+  <div id="buy-your-collectible" style="height: 60px">
+  </div>
+
+<div class="container">
+  <div class="form-new-collectible d-flex flex-column text-center">
+    <h1 class='title-presentation pt-3 text-center'>Vendez Votre Collectible</h1>
+    <%= simple_form_for @collectible do |f| %>
+      <%= f.input :category, collection: Collectible.pluck(:category).uniq, prompt: 'Selectionner une catégorie', input_html: { class: 'select2' } %>
+      <%= f.input :brand, collection: Collectible.pluck(:brand).uniq, prompt: 'Selectionner une marque', input_html: { class: 'select2' }%>
+      <%= f.input :model %>
+      <%= f.input :reference %>
+      <%= f.input :retail_price, label: "Prix de revente" %>
+      <%= f.input :resell_value, label: "Valeur de resell" %>
+      <%= f.input :description %>
+      <%= f.input :user_id %>
+      <%= f.input :nft_number %>
+      <%= f.button :submit, class: "btn-login" %>
+    <% end %>
+  </div>
+</div>
