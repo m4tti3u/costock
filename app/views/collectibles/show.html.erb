@@ -13,7 +13,18 @@
       <%= link_to 'Retour',  collectibles_path , class: "btn" %>
     </div>
 
-
+  <div class="all-asks">
+    <p>asks</p>
+    <% @asks.each do |ask| %>
+      <p><%= ask.ask_price %> </p>
+    <% end %>
+  </div>
+  <div class="all-bids">
+    <p>bids</p>
+    <% @bids.each do |bid| %>
+      <p> <%= bid.bid_price %> </p>
+    <% end %>
+  </div>
 
     <div id="accordion">
       <% if @lowest_ask.present? && @lowest_ask.user != current_user %>

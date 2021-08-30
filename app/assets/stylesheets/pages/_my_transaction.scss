@@ -15,17 +15,40 @@
 
 .nft-list-transaction{
   overflow: hidden;
-  height: 80px;
+  height: 55px;
   background: white;
-  box-shadow: 0 10px 15px rgba(0,0,0,0.2);
+  box-shadow: 0 8px 11px rgba(0,0,0,0.2);
   display: flex;
   justify-content: space-between;
-  align-items: center;
-  border-radius: 20px;
+  align-items: center ;
+  border-radius: 8px;
+    .nft-title {
+      font-weight: 600;
+    }
+}
+
+.nft-list-transaction>.div {
+      padding: 0;
+      margin: 0;
+    }
+
+.title-nft-list {
+  margin: 0;
+  font-size: 12px;
+  color: rgb(189, 189, 189);
+  padding-bottom: 0px;
 }
 
 .nft-category-card{
-display: -webkit-inline-box;
-padding: inherit;
-margin: 15px 15px 0px 1px
+  display: -webkit-inline-box;
+  padding: inherit;
+  margin: 15px 15px 0px 1px;
+  align-items: center;
+}
+
+.summary {
+  border: 1px solid black;
+  margin: 12px;
+  width: 200px;
+  background-color: white;
 }
