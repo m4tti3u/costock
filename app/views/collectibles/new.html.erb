@@ -41,15 +41,14 @@
   <div class="form-new-collectible d-flex flex-column text-center">
     <h1 class='title-presentation pt-3 text-center'>Vendez Votre Collectible</h1>
     <%= simple_form_for @collectible do |f| %>
-      <%= f.input :category, collection: Collectible.pluck(:category).uniq, prompt: 'Selectionner une catégorie', input_html: { class: 'select2' } %>
-      <%= f.input :brand, collection: Collectible.pluck(:brand).uniq, prompt: 'Selectionner une marque', input_html: { class: 'select2' }%>
-      <%= f.input :model %>
-      <%= f.input :reference %>
+      <%= f.input :category, collection: Collectible.pluck(:category).uniq, label: 'Selectionner une catégorie', input_html: { class: 'select2' } %>
+      <%= f.input :brand, collection: Collectible.pluck(:brand).uniq, label: 'Selectionner une marque', input_html: { class: 'select2' }%>
+      <%= f.input :model, label: "Modèle" %>
+      <%= f.input :reference, label: "Référence" %>
       <%= f.input :retail_price, label: "Prix de revente" %>
       <%= f.input :resell_value, label: "Valeur de resell" %>
-      <%= f.input :description %>
-      <%= f.input :user_id %>
-      <%= f.input :nft_number %>
+      <%= f.input :description, label: "Description" %>
+      <%= f.input :nft_number, label: "Nombre de NFTs" %>
       <%= f.button :submit, class: "btn-login" %>
     <% end %>
   </div>

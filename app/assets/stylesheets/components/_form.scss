@@ -12,3 +12,13 @@
     border-radius: 20px;
   }
 }
+
+.simpleform-container {
+  display: flex;
+  width: 300px;
+  position: relative;
+  bottom: -26px;
+  right: -785px;
+  z-index: 1;
+  border-radius: 20px;
+}
