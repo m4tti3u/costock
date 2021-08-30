@@ -4,6 +4,7 @@ class TransactionsController < ApplicationController
 
   def index
     @transactions = Transaction.all
+    @nfts = current_user.nfts
   end
 
   def new

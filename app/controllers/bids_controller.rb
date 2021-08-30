@@ -22,7 +22,7 @@ class BidsController < ApplicationController
     @bid = Bid.find(params[:id])
     @nft = Nft.where(collectible: @bid.collectible, user: current_user).first
     if @nft.present? && @bid.update(progress: 'done')
-      @nft.update(user: @bid_user)
+      @nft.update(user: @bid.user)
       @transaction = Transaction.create(user: current_user, nft: @nft)
       redirect_to my_transactions_path
     else
