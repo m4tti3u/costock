@@ -2,7 +2,13 @@
 
   <div class="container-hero">
     <div class="banner-container-collectibles">
-      <h1 class="banner-title">Sneakers</h1>
+      <h1 class="banner-title">
+        <% if @category_filter.present? %>
+          <%= @category_filter %>
+        <% else %>
+        Collectibles
+        <% end %>
+      </h1>
       <h2 class="banner-title-h2">Trouvez l'objet rare et intéressant dont vous avez besoin</h2>
       <div class="search-container">
         <%= form_tag collectibles_path, method: :get do %>
@@ -10,12 +16,17 @@
             <%= text_field_tag :query,
               params[:query],
               class: "form-control input-text rounded-search-form",
-              placeholder: "Trouve un objet 😎 "
+              placeholder: "Trouve un objet "
             %>
             <i class="fas fa-search"></i>
           </div>
         <% end %>
       </div>
+
+      <%= simple_form_for :collectible_filters, method: :get do |f| %>
+        <%= f.input :category, collection: @category_array, input_html: {class: "select2"}  %>
+        <%= f.submit 'Filtrer', class: "btn-signup" %>
+      <% end %>
     </div>
 
     <div class="banner-collectibles-image">
