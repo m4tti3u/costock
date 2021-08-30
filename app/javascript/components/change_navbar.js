@@ -3,7 +3,7 @@ const changeNavbarOnScroll = () => {
   document.addEventListener("scroll", (event) => {
     const scrollPosition = window.scrollY
     console.log(scrollPosition)
-    if (scrollPosition > 80)
+    if (scrollPosition > 70)
     navbar.classList.add("scrolled")
     else
       navbar.classList.remove("scrolled")
