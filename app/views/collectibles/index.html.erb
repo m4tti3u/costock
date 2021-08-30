@@ -1,8 +1,14 @@
 <div class="container">
 
-  <div class="container-hero">
+  <div class="container-hero-index">
     <div class="banner-container-collectibles">
-      <h1 class="banner-title">Sneakers</h1>
+      <h1 class="banner-title">
+        <% if @category_filter.present? %>
+          <%= @category_filter %>
+        <% else %>
+        Collectibles
+        <% end %>
+      </h1>
       <h2 class="banner-title-h2">Trouvez l'objet rare et intéressant dont vous avez besoin</h2>
       <div class="search-container">
         <%= form_tag collectibles_path, method: :get do %>
@@ -10,17 +16,30 @@
             <%= text_field_tag :query,
               params[:query],
               class: "form-control input-text rounded-search-form",
-              placeholder: "Trouve un objet 😎 "
+              placeholder: "Trouve un objet "
             %>
             <i class="fas fa-search"></i>
           </div>
         <% end %>
       </div>
+
+      <%= simple_form_for :collectible_filters, method: :get do |f| %>
+        <div class="simpleform-container">
+          <%= f.input :category, collection: @category_array, label: false, input_html: {class: "select2-filter"}, required: false %>
+          <%= f.submit 'Filtrer', class: "btn-filter" %>
+        </div>
+      <% end %>
     </div>
 
     <div class="banner-collectibles-image">
-      <%= image_tag "image-sneakers-banner.png", class: "image-snkrs-banner" %>
-      <%= image_tag "ellipse.png", class: "ellipse-img"%>
+      <% if @category_filter == "Montres" %>
+        <%= image_tag "watchfilter.png", class: "image-snkrs-banner" %>
+      <% elsif @category_filter == "Cartes" %>
+        <%= image_tag "cardfilter.png", class: "image-snkrs-banner card-filter-img" %>
+      <% else %>
+        <%= image_tag "image-sneakers-banner.png", class: "image-snkrs-banner" %>
+      <% end %>
+        <%= image_tag "ellipse.png", class: "ellipse-img"%>
     </div>
 
   </div>

@@ -3,3 +3,22 @@
   width: 80%;
   margin: 0 auto;
 }
+
+.form-new-collectible {
+  width: 50%;
+  margin: 0 auto;
+  color: #044A7E;
+  .form-control {
+    border-radius: 20px;
+  }
+}
+
+.simpleform-container {
+  display: flex;
+  width: 300px;
+  position: relative;
+  bottom: -26px;
+  right: -785px;
+  z-index: 1;
+  border-radius: 20px;
+}

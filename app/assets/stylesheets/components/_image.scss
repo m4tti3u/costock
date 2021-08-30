@@ -18,7 +18,10 @@
   height: 450px;
   left: 60%;
 }
-
+.card-filter-img{
+  width: 350px;
+  left: 65%;
+}
 .image-current-balance {
   border-radius: 10px;
 }
@@ -40,4 +43,8 @@
   100% {
 		transform: translatey(0px);
 	}
+}
+
+.collectible-new-image {
+  width: 550px;
 }
