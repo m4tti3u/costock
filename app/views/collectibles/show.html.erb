@@ -1,38 +1,31 @@
 <div class="container">
-<%= area_chart(vendredi: 12, samedi: 6, dimanche:5, lundi: 7, mardi: 2, mercredi: 6, jeudi: 10) %>
+  <div class="row">
 
-  <div class="collectible-show-container">
-    <div class="collectible-show-card">
-      <h1> <%= @collectible.model %> </h1>
-      <p>Marque : <%= @collectible.brand %> </p>
-      <p> Description : <%= @collectible.description %> </p>
-      <p>Prix de vente initial du produit : <%= @collectible.retail_price %> €</p>
-      <p>Valeur de resell : <%= @collectible.resell_value %> €</p>
-      <p><%= @collectible.nft_number %> NFT créés </p>
-      <%= cl_image_tag @collectible.photo.key %>
-      <%= link_to 'Retour',  collectibles_path , class: "btn" %>
+    <div class="collectible-show-container">
+      <div class="collectible-show-card justify-content-center ">
+        <h1> <%= @collectible.model %> </h1>
+        <%= cl_image_tag @collectible.photo.key %>
+        <div class="description-product"></div>
+      <div id="description-product-title">
+          <h3>Description Produit</h3>
+        </div>
+          <p>Marque : <%= @collectible.brand %> </p>
+          <p> Description : <%= @collectible.description %> </p>
+          <p>Prix de vente initial du produit : <%= @collectible.retail_price %> €</p>
+          <p>Valeur de resell : <%= @collectible.resell_value %> €</p>
+          <p><%= @collectible.nft_number %> NFT créés </p>
+          <%# <%= link_to 'Retour',  collectibles_path , class: "btn" %>
     </div>
 
-  <div class="all-asks">
-    <p>asks</p>
-    <% @asks.each do |ask| %>
-      <p><%= ask.ask_price %> </p>
-    <% end %>
-  </div>
-  <div class="all-bids">
-    <p>bids</p>
-    <% @bids.each do |bid| %>
-      <p> <%= bid.bid_price %> </p>
-    <% end %>
   </div>
 
     <div id="accordion">
       <% if @lowest_ask.present? && @lowest_ask.user != current_user %>
-          <div class="card">
+          <div class="card-nft-show">
             <div class="card-header" id="headingOne">
               <h6 class="mb-0">
                 <p>Lowest Ask : <%= @lowest_ask.ask_price %> €</p>
-                <button class="btn buy-bid" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                <button class="btn-buy-bid" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
                   <p>Acheter ou faire une offre</p>
                 </button>
               </h6>
@@ -48,7 +41,7 @@
             </div>
           </div>
       <% else %>
-        <div class="card">
+        <div class="card-nft-show">
           <div class="card-header" id="headingOne">
             <h6 class="mb-0">
               <% if @lowest_ask.present? %>
@@ -76,11 +69,11 @@
       <% end %>
 
       <% if @highest_bid.present? && @highest_bid.user != current_user %>
-          <div class="card">
+          <div class="card-nft-show">
             <div class="card-header" id="headingTwo">
               <h6 class="mb-0">
                   <p>Highest Bid : <%= @highest_bid.bid_price %> €</p>
-                <button class="btn ask-cell" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                <button class="btn-ask-cell" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
                   <p>Vendre ou demander un prix</p>
               </button>
               </h6>
@@ -99,17 +92,17 @@
             </div>
           </div>
       <% else %>
-        <div class="card">
+        <div class="card-nft-show">
             <div class="card-header" id="headingOne">
               <h6 class="mb-0">
                 <% if @highest_bid.present? %>
                   <p>Highest Bid : <%= @highest_bid.bid_price %> €</p>
-                  <button class="btn ask-cell" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                  <button class="btn-ask-cell" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
                   <p>Demander un prix</p>
                   </button>
                 <% else %>
                   <p>Highest Bid : -- €</p>
-                  <button class="btn ask-cell" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                  <button class="btn-ask-cell" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
                   <p>Demander un prix</p>
                   </button>
                 <% end %>
@@ -127,6 +120,7 @@
       <% end %>
 
     </div>
-
+  <%= area_chart(vendredi: 12, samedi: 6, dimanche:5, lundi: 7, mardi: 2, mercredi: 6, jeudi: 10) %>
+  <p> 🔥 Historique des prix 🔥</p>
   </div>
 </div>

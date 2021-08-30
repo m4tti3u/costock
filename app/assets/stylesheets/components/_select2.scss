@@ -1,0 +1,21 @@
+.select2 {
+  width: 100% !important;
+}
+
+.select2-filter {
+  height: 30px;
+  width: 100% !important;
+}
+
+.collectible_filters_category {
+  flex-grow: 1;
+}
+
+.collectible_filters {
+  position: absolute;
+}
+
+.select2-selection--single {
+  border-radius: 20px !important;
+  // height: 36px !important;
+}

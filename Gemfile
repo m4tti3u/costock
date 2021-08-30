@@ -30,7 +30,8 @@ gem 'nokogiri'
 gem 'bootsnap', '>= 1.4.2', require: false
 
 gem 'devise'
-
+gem "select2-rails"
+# gem 'select2_simple_form', github: 'lndl/select2_simple_form', tag: '0.7.3'
 gem 'autoprefixer-rails', '10.2.5'
 gem 'font-awesome-sass'
 gem 'simple_form'

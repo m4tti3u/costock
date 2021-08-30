@@ -8,6 +8,7 @@
   width: 1260px;
   margin-top: 100px;
   margin: auto;
+  margin-bottom: 100px;
 }
 
 .hero-container-text{
@@ -111,4 +112,22 @@
   .rounded-search-form {
     border-radius: 50px;
   }
+}
+
+.container-new-collectibles {
+  display: flex;
+  width: 1260px;
+  margin-top: 100px;
+  margin: auto;
+  align-items: center;
+  text-align: center;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.container-hero-index{
+  display: flex;
+  width: 1260px;
+  margin-top: 100px;
+  margin: auto;
 }
