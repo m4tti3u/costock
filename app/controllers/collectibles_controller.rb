@@ -11,12 +11,12 @@ class CollectiblesController < ApplicationController
       @collectibles = Collectible.search_by_brand_and_model(params[:query])
     end
     if params[:collectible_filters].present?
-        category_filter = params[:collectible_filters][:category]
-        @collectibles = @collectibles.where(category: category_filter) unless category_filter.empty?
+        @category_filter = params[:collectible_filters][:category]
+        @collectibles = @collectibles.where(category: @category_filter)
 
         # max_price_filter = params[:collectible_filters][:max_price]
         # @collectibles = @collectibles.where("collectibles.price <= :query ", query: max_price_filter) unless max_price_filter.empty?
-      end
+    end
   end
 
   def show

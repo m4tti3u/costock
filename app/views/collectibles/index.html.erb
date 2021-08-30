@@ -2,7 +2,13 @@
 
   <div class="container-hero">
     <div class="banner-container-collectibles">
-      <h1 class="banner-title">Sneakers</h1>
+      <h1 class="banner-title">
+        <% if @category_filter.present? %>
+          <%= @category_filter %>
+        <% else %>
+        Collectibles
+        <% end %>
+      </h1>
       <h2 class="banner-title-h2">Trouvez l'objet rare et intéressant dont vous avez besoin</h2>
       <div class="search-container">
         <%= form_tag collectibles_path, method: :get do %>
@@ -18,8 +24,8 @@
       </div>
 
       <%= simple_form_for :collectible_filters, method: :get do |f| %>
-        <%= f.input :category, label: 'Category', collection: @climate_array  %>
-        <%= f.submit 'Filtrer', class: "btn btn-primary" %>
+        <%= f.input :category, collection: @category_array, input_html: {class: "select2"}  %>
+        <%= f.submit 'Filtrer', class: "btn-signup" %>
       <% end %>
     </div>
 
