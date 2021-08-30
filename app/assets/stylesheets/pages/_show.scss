@@ -1,0 +1,73 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+.card-nft-show{
+  margin-top: 30px;
+  margin-left: 25px;
+}
+.card-header{
+  background-color:white ;
+}
+
+ .btn-buy-bid{
+  background: linear-gradient(to right, #00492F 50%, #006340 50%);
+  background-size: 200% 100%;
+  color: white;
+  padding: 5px;
+  background-position: right bottom;
+  transition: all .5s ease-out;
+  border-radius: 20px;
+  width: 200px;
+  &:hover {
+    background-position: left bottom;
+    text-decoration: none;
+    }
+  }
+
+  .btn-ask-cell{
+  background: linear-gradient(to right, #DA2C16 50%, #AE1E0B 50%);
+  background-size: 200% 100%;
+  color: white;
+  padding: 5px ;
+  background-position: right bottom;
+  transition: all .5s ease-out;
+  border-radius: 20px;
+  width: 200px;
+  &:hover {
+    background-position: left bottom;
+    text-decoration: none;
+    }
+  }
+
+
+
+
+.collectible-show-container{
+  border-radius: 10px;
+  background-color: #F4F4F4;
+  margin-top: 10px;
+  margin-right: 10px;
+
+  h1{
+    font-size: 24px;
+    color: #038AD4;
+    font-family: 'Montserrat', sans-serif;
+  }
+  p{
+    color: gray;
+  }
+}
+
+  .description-product{
+    border-top: 3px solid grey;
+
+ }
+
+#description-product-title h3 {
+//display: grid;
+width: 140px;
+background-color: #038AD4;
+color: white;
+font-size: 14px;
+margin-top: 4px;
+margin-left: 4px;
+}

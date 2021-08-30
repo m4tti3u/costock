@@ -11,8 +11,11 @@
 // Your CSS partials
 @import "components/index";
 @import "pages/index";
+@import "pages/show";
+
 @import 'select2/dist/css/select2';
 
 body{
   background-color: white;
 }
+
