@@ -10,12 +10,17 @@
             <%= text_field_tag :query,
               params[:query],
               class: "form-control input-text rounded-search-form",
-              placeholder: "Trouve un objet 😎 "
+              placeholder: "Trouve un objet "
             %>
             <i class="fas fa-search"></i>
           </div>
         <% end %>
       </div>
+
+      <%= simple_form_for :collectible_filters, method: :get do |f| %>
+        <%= f.input :category, label: 'Category', collection: @climate_array  %>
+        <%= f.submit 'Filtrer', class: "btn btn-primary" %>
+      <% end %>
     </div>
 
     <div class="banner-collectibles-image">
