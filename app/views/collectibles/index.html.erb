@@ -32,8 +32,14 @@
     </div>
 
     <div class="banner-collectibles-image">
-      <%= image_tag "image-sneakers-banner.png", class: "image-snkrs-banner" %>
-      <%= image_tag "ellipse.png", class: "ellipse-img"%>
+      <% if @category_filter == "Montres" %>
+        <%= image_tag "watchfilter.png", class: "image-snkrs-banner" %>
+      <% elsif @category_filter == "Cartes" %>
+        <%= image_tag "cardfilter.png", class: "image-snkrs-banner card-filter-img" %>
+      <% else %>
+        <%= image_tag "image-sneakers-banner.png", class: "image-snkrs-banner" %>
+      <% end %>
+        <%= image_tag "ellipse.png", class: "ellipse-img"%>
     </div>
 
   </div>
