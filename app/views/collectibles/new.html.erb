@@ -1,7 +1,7 @@
 <div class="container-new-collectibles">
   <div class="banner-new-collectible">
-    <h1 class="hero-title mb-5">Vendez votre collectible.</h1>
-    <%= link_to "Vendez", "#buy-your-collectible", class: "btn-login" %>
+    <h1 class="hero-title my-5">Vendez votre collectible.</h1>
+    <%= link_to "Vendez", "#buy-your-collectible", class: "btn-sell-my-collectible" %>
   </div>
 </div>
 
@@ -32,15 +32,17 @@
       <p class="paragraphe-subtitle">Suivez les nouveaux objets et restez au courant des derniers changements dans les taux de crypto-monnaie en un seul clic !</p>
     </div>
   </div>
-
 </div>
 
-<div class="container", id="buy-your-collectible">
+  <div id="buy-your-collectible" style="height: 60px">
+  </div>
+
+<div class="container">
   <div class="form-new-collectible d-flex flex-column text-center">
     <h1 class='title-presentation pt-3 text-center'>Vendez Votre Collectible</h1>
     <%= simple_form_for @collectible do |f| %>
-      <%= f.input :category %>
-      <%= f.input :brand %>
+      <%= f.input :category, collection: Collectible.pluck(:category).uniq, prompt: 'Selectionner une catégorie', input_html: { class: 'select2' } %>
+      <%= f.input :brand, collection: Collectible.pluck(:brand).uniq, prompt: 'Selectionner une marque', input_html: { class: 'select2' }%>
       <%= f.input :model %>
       <%= f.input :reference %>
       <%= f.input :retail_price, label: "Prix de revente" %>
