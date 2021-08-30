@@ -1,6 +1,6 @@
 <div class="container">
 
-  <div class="container-hero">
+  <div class="container-hero-index">
     <div class="banner-container-collectibles">
       <h1 class="banner-title">
         <% if @category_filter.present? %>
@@ -24,8 +24,10 @@
       </div>
 
       <%= simple_form_for :collectible_filters, method: :get do |f| %>
-        <%= f.input :category,  label: "Trier par catégorie ", collection: @category_array, input_html: {class: "select2"}  %>
-        <%= f.submit 'Filtrer', class: "btn-signup" %>
+        <div class="simpleform-container">
+          <%= f.input :category, collection: @category_array, label: false, input_html: {class: "select2-filter"}, required: false %>
+          <%= f.submit 'Filtrer', class: "btn-filter" %>
+        </div>
       <% end %>
     </div>
 
