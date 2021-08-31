@@ -113,3 +113,33 @@
     font-weight: 700;
   }
 }
+
+.card-sneakers {
+  position: relative;
+  width: 600px;
+  height: 450px;
+  display: flex;
+  flex-direction: column;
+  border: none;
+}
+.card-sneakers span {
+  position: absolute;
+  top: 0;
+  left: calc(100% / 7 * var(--i));
+  width: calc(100% / 7);
+  height: 100%;
+}
+.card-sneakers img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  pointer-events: none;
+}
+.card-sneakers img:nth-child(2),
+.card-sneakers span:hover + img {
+  opacity: 1;
+}
