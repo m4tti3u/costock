@@ -20,7 +20,7 @@ users = User.create!([
   ])
   puts User.last.id
 
-collectible1 = Collectible.create!(category: 'Sneakers', brand: 'Nike', model: 'Air Jordan 1 X Travis Scott X Fragment', reference: 'NK-AJ1-TS-FRG', retail_price: 180.0, resell_value: 2488.9, description: 'Une paire révolutionnaire melant la créativité de 3 artistes de génies', nft_number: 1000, user_id: '3')
+collectible1 = Collectible.create!(category: 'Sneakers', brand: 'Nike', model: 'TravisXFragment', reference: 'NK-AJ1-TS-FRG', retail_price: 180.0, resell_value: 2488.9, description: 'Une paire révolutionnaire melant la créativité de 3 artistes de génies', nft_number: 1000, user_id: '3')
 # file1 = URI.open('https://images.stockx.com/360/Air-Jordan-1-High-OG-SP-fragment-design-x-Travis-Scott/Images/Air-Jordan-1-High-OG-SP-fragment-design-x-Travis-Scott/Lv2/img01.jpg?auto=compress&w=480&q=90&dpr=1&updated_at=1628097985&h=320&fm=webp')
 photo1 = URI.open('https://images.stockx.com/360/Air-Jordan-1-High-OG-SP-fragment-design-x-Travis-Scott/Images/Air-Jordan-1-High-OG-SP-fragment-design-x-Travis-Scott/Lv2/img36.jpg?auto=format,compress&w=559&q=90&dpr=2&updated_at=1628097985')
 photo2 = URI.open('https://images.stockx.com/360/Air-Jordan-1-High-OG-SP-fragment-design-x-Travis-Scott/Images/Air-Jordan-1-High-OG-SP-fragment-design-x-Travis-Scott/Lv2/img04.jpg?auto=format,compress&w=559&q=90&dpr=2&updated_at=1628097985')
@@ -36,12 +36,12 @@ collectible1.photos.attach(io: photo5, filename: 'jordantravis5.jpg', content_ty
 collectible1.photos.attach(io: photo6, filename: 'jordantravis6.jpg', content_type: 'image/jpg')
 collectible1.save
 
-collectible2 = Collectible.create!(category: 'Sneakers', brand: 'Adidas', model: 'NMD X Chanel', reference: 'AD-NMD-CH', retail_price: 200.0, resell_value: 5367.9, description: 'Une paire révolutionnaire melant la créativité de 3 artistes de génies', nft_number: 100, user_id: '3')
+collectible2 = Collectible.create!(category: 'Sneakers', brand: 'Adidas', model: 'NMDXChanel', reference: 'AD-NMD-CH', retail_price: 200.0, resell_value: 5367.9, description: 'Une paire révolutionnaire melant la créativité de 3 artistes de génies', nft_number: 100, user_id: '3')
 file2 = URI.open('https://images.stockx.com/images/Adidas-Human-Race-NMD-Pharrell-x-Chanel-Black.png?fit=fill&bg=FFFFFF&w=480&h=320&auto=compress&q=90&dpr=1&trim=color&updated_at=1606321560&pad=0&fm=webp')
 collectible2.photos.attach(io: file2, filename: 'nmd.png', content_type: 'image/png')
 collectible2.save
 
-collectible3 = Collectible.create!(category: 'Sneakers', brand: 'Nike', model: 'Air Jordan 1 1985 Chicago', reference: 'NK-AJ1-CH-1985', retail_price: 60.0, resell_value: 5200.0, description: 'Une paire révolutionnaire melant la créativité de 3 artistes de génies', nft_number: 100, user_id: '3')
+collectible3 = Collectible.create!(category: 'Sneakers', brand: 'Nike', model: 'AJ185 Chicago', reference: 'NK-AJ1-CH-1985', retail_price: 60.0, resell_value: 5200.0, description: 'Une paire révolutionnaire melant la créativité de 3 artistes de génies', nft_number: 100, user_id: '3')
 # file3 = URI.open('https://images.restocks.net/products/554724-173/air-jordan-1-mid-chicago-1-1000.png')
 photo1 = URI.open('https://images.stockx.com/360/Air-Jordan-1-OG-Chicago-1985/Images/Air-Jordan-1-OG-Chicago-1985/Lv2/img01.jpg?auto=format,compress&w=559&q=90&dpr=2&updated_at=1606316360')
 photo2 = URI.open('https://images.stockx.com/360/Air-Jordan-1-OG-Chicago-1985/Images/Air-Jordan-1-OG-Chicago-1985/Lv2/img05.jpg?auto=format,compress&w=559&q=90&dpr=2&updated_at=1606316360')
@@ -63,22 +63,22 @@ collectible3.photos.attach(io: photo8, filename: 'jordanog8.jpg', content_type: 
 collectible3.photos.attach(io: photo9, filename: 'jordanog9.jpg', content_type: 'image/jpg')
 collectible3.save
 
-collectible4 = Collectible.create!(category: 'Cartes', brand: 'Pokemon', model: 'Dracofeu 1st edition', reference: 'PK-DCF-1ST-PGA10', retail_price: 1.0, resell_value: 500000.0, description: 'Une carte mythique pour toutes les générations fans de Pokemon dans un état immaculé', nft_number: 10000, user_id: '3')
+collectible4 = Collectible.create!(category: 'Cartes', brand: 'Pokemon', model: 'Dracofeu 1st ed.', reference: 'PK-DCF-1ST-PGA10', retail_price: 1.0, resell_value: 500000.0, description: 'Une carte mythique pour toutes les générations fans de Pokemon dans un état immaculé', nft_number: 10000, user_id: '3')
 file4 = URI.open('https://fr.shopping.rakuten.com/photo/1115542299.jpg')
 collectible4.photos.attach(io: file4, filename: 'dracofeu.jpg', content_type: 'image/jpg')
 collectible4.save
 
-collectible5 = Collectible.create!(category: 'Cartes', brand: 'Pokemon', model: 'Blastoise 1st edition', reference: 'PK-BST-1ST-PGA8.5', retail_price: 1.0, resell_value: 12408.0, description: 'Une carte mythique pour toutes les générations fans de Pokemon dans un état immaculé', nft_number: 1000, user_id: '3')
+collectible5 = Collectible.create!(category: 'Cartes', brand: 'Pokemon', model: 'Blastoise 1st ed.', reference: 'PK-BST-1ST-PGA8.5', retail_price: 1.0, resell_value: 12408.0, description: 'Une carte mythique pour toutes les générations fans de Pokemon dans un état immaculé', nft_number: 1000, user_id: '3')
 file5 = URI.open('https://images.stockx.com/images/Blastoise-Holo-1999-Pokemon-Base-Set-1st-Edition-2-102-PSA.jpg?fit=fill&bg=FFFFFF&w=480&h=320&auto=compress&q=90&dpr=1&trim=color&updated_at=1620851076&pad=0&fm=webp')
 collectible5.photos.attach(io: file5, filename: 'blastoise.jpg', content_type: 'image/jpg')
 collectible5.save
 
-collectible6 = Collectible.create!(category: 'Cartes', brand: 'Panini Revolution', model: '2019-20 Revolution Infinite Holographic Kobe Bryant', reference: 'PZ-KB-HOLO', retail_price: 10.0, resell_value: 18090.1, description: 'Une carte magnifique', nft_number: 1000, user_id: '3')
+collectible6 = Collectible.create!(category: 'Cartes', brand: 'Panini Revolution', model: 'Infinite Holo KB', reference: 'PZ-KB-HOLO', retail_price: 10.0, resell_value: 18090.1, description: 'Une carte magnifique', nft_number: 1000, user_id: '3')
 file6 = URI.open('https://www.picclickimg.com/d/l400/pict/334066054028_/2019-panini-Prizm-Kobe-Bryant-GAME-USED-jersey.jpg')
 collectible6.photos.attach(io: file6, filename: 'kobe.jpg', content_type: 'image/jpg')
 collectible6.save
 
-collectible7 = Collectible.create!(category: 'Cartes', brand: 'Pokemon', model: 'Booster Pack 1st edition', reference: 'PK-BSTR-1ST', retail_price: 19.0, resell_value: 488.9, description: 'Un paquet de cartes Pokemon dans un état immaculé', nft_number: 100, user_id: '3')
+collectible7 = Collectible.create!(category: 'Cartes', brand: 'Pokemon', model: 'Booster Pack 1st ed.', reference: 'PK-BSTR-1ST', retail_price: 19.0, resell_value: 488.9, description: 'Un paquet de cartes Pokemon dans un état immaculé', nft_number: 100, user_id: '3')
 file7 = URI.open('https://www.play-in.com/img/product/l/pokemon_set_de_base_edition_1_booster_florizarre_fr.webp')
 collectible7.photos.attach(io: file7, filename: 'boosterpack.jpg', content_type: 'image/jpg')
 collectible7.save
