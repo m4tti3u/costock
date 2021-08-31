@@ -29,6 +29,7 @@ gem 'nokogiri'
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.2', require: false
 
+gem 'rails_12factor', group: :production
 gem 'devise'
 gem "select2-rails"
 # gem 'select2_simple_form', github: 'lndl/select2_simple_form', tag: '0.7.3'
