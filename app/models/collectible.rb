@@ -14,4 +14,15 @@ class Collectible < ApplicationRecord
     using: {
       tsearch: { prefix: true }
     }
+
+  def self.bid
+    self.bids
+        .where(user_id: current_user)
+  end
+
+  def self.ask
+    self.asks
+        .where(user_id: current_user)
+  end
+
 end

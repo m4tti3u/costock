@@ -51,9 +51,98 @@
   align-items: center;
 }
 
-.summary {
-  border: 1px solid black;
-  margin: 12px;
-  width: 200px;
-  background-color: white;
+
+.top-cards {
+  display: flex;
+  justify-content: space-evenly;
 }
+
+.portfolio {
+  overflow: hidden;
+  display: flex;
+  height: 50px;
+  width: 350px;
+  background: white;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  justify-content: center;
+  align-items: center;
+  margin: 6px;
+
+  P {
+    margin: 0;
+    padding: 12px;
+    font-weight: 700;
+    color: #044A7E;
+  }
+  .sticker {
+    height: 24px;
+    width: 24px;
+  }
+}
+
+.portfolio:hover {
+  background: rgb(240, 240, 240);
+}
+
+.portfolio-container {
+  h4 {
+    color: #044A7E;
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 24px;
+  }
+}
+
+.balance {
+  width: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.your-portfolio {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.summary-portfolio {
+  overflow: hidden;
+  width: 350px;
+  background: white;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  justify-content: center;
+  align-items: center;
+  margin: 6px;
+    p {
+      padding: 0;
+      color: #044A7E;
+      text-align: center;
+      padding-top: 14px;
+    }
+  }
+
+  .chart {
+    height: 300px;
+    overflow: hidden;
+    border: 1px solid #044A7E;
+  }
+
+  .my-nfts {
+    text-align: center;
+    width: 900px;
+    margin-top: 24px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .nft-container {
+    display: flex;
+    justify-content: center;
+  }
+
+  .bids-asks {
+    width: 900px;
+    margin-top: 24px;;
+  }

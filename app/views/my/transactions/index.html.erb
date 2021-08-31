@@ -1,46 +1,43 @@
-<div class="container-my-transaction">
+<div class="portfolio-container">
 
-  <div class="row pl-3 mw-100" >
-      <div class="div side-navbar col-12 col-lg-4 " >
-        <div class="div nft-category-card">
-          <img class="avatar-large" alt="avatar-large" src="https://images-platform.99static.com/EI2mMgfeyCEQLwIUr2YEt2Sokcc=/1x0:1876x1875/500x500/top/smart/99designs-contests-attachments/96/96758/attachment_96758134" />
-          <h3> Portfolio</h3>
+  <div class="top-cards">
+    <div class="your-portfolio">
+      <h4>MES PORTFOLIOS</h4>
+      <div class="div">
+        <div class="portfolio">
+          <%= image_tag "image-sneakers-banner.png", class: "sticker" %>
+          <p>Sneakers</p>
         </div>
-
-        <div class="div nft-category-card">
-          <img class="avatar-large" alt="avatar-large" src="https://images-platform.99static.com/EI2mMgfeyCEQLwIUr2YEt2Sokcc=/1x0:1876x1875/500x500/top/smart/99designs-contests-attachments/96/96758/attachment_96758134" />
-          <h4> Portfolio Cartes à collectioner🃏</h4>
+        <div class="portfolio">
+          <%= image_tag "watchfilter.png", class: "sticker" %>
+          <p>Watches</p>
         </div>
-
-        <div class="div nft-category-card">
-          <img class="avatar-large" alt="avatar-large" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR4BTCxK1UhtLFvEzlrdHs0cQocQGxQ-FuBoRO8HUalNz9od3L9kO57O9HtqXzhf8hDq9g&usqp=CAU" />
-          <h4> Portfolio Sneakers 👟</h4>
+        <div class="portfolio">
+          <%= image_tag "cardfilter.png", class: "sticker" %>
+          <p>Trading Cards</p>
         </div>
-
-        <div class="div nft-category-card ">
-          <img class="avatar-large" alt="avatar-large" src="https://i.pinimg.com/originals/e1/3b/9c/e13b9c6e166bbcd32d1392e7ad4a461b.jpg" />
-          <h4> Portfolio Montres ⌚</h4>
+        <div class="portfolio">
+          <p>+ Ajouter</p>
         </div>
-
-        <a class="btn btn-transaction" href="#"> + Créer un nouveau portfolio</a>
-        <a class="btn btn-transaction" href="#"> + Mes asks</a>
-        <a class="btn btn-transaction" href="#"> + Mes bids</a>
       </div>
-
-      <div class="container col-12 col-lg-8">
-        <div class="div card-category-current-balance text-center" >
-          <h2 class='mt-3'> Valeur de mes avoirs NFT </h2>
-          <%# <img class="image-current-balance mt-3 mb-5" src="https://image.freepik.com/vecteurs-libre/graphique-boursier-forex-concept-graphique_73426-35.jpg" /> %>
-          <%= area_chart(vendredi: 12, samedi: 6, dimanche:5, lundi: 7, mardi: 2, mercredi: 6, jeudi: 10) %>
-        </div>
-
-      <div class="summary my-nfts text-center m-3">
-        <%# @nfts.each do |nft| %>
-          <p>Nombre de NFT: <%= @nfts.count %></p>
-          <p>Valorisation totale: <%= @valorisation %>€</p>
-        <%# end %>
+    </div>
+    <div class="balance">
+      <h4>MES AVOIRS</h4>
+      <div class="chart">
+        <%= area_chart(vendredi:  12, samedi: 6, dimanche:5, lundi: 7, mardi: 2, mercredi: 6, jeudi: 10) %>
       </div>
+      <div class="summary-portfolio">
+        <p>Nombre de NFT : <%= @nfts.count %></p>
+        <p>Valorisation totale : <%= @valorisation %>€</p>
+      </div>
+    </div>
+  </div>
 
+  <div class="nft-container">
+    <div class="my-nfts">
+      <h4>MES NFTs</h4>
+      <p class="description">Retrouvez l'intégralité de vos Nfts dans cette section</p>
+      <div class="list">
         <% @collectibles.each do |collectible| %>
           <div class="div nft-list-transaction px-3 mt-3">
             <div class="div">
@@ -84,9 +81,123 @@
             </div>
           </div>
         <% end %>
-
       </div>
+    </div>
+  </div>
+
+  <div class="switching-cards">
+    <div class="bids">
+      <div class="nft-container">
+        <div class="my-nfts">
+          <h4>MES BIDs</h4>
+          <p class="description">Retrouvez l'intégralité de vos BIDs dans cette section</p>
+          <div class="list">
+            <% @bided_collectibles.each do |collectible| %>
+              <div class="div nft-list-transaction px-3 mt-3">
+                <div class="div">
+                  <p class="title-nft-list">Nom</p>
+                  <p class="nft-title"> <%= collectible.model %></p>
+                </div>
+                <div class="div">
+                <%= cl_image_tag collectible.photo.key, class: "avatar-large"%>
+                </div>
+                <div class="div">
+                  <p class="title-nft-list">Catégorie</p>
+                  <p><%= collectible.category %></p>
+                </div>
+                <div class="div">
+                  <p class="title-nft-list">Ref.</p>
+                  <p><%= collectible.reference %></p>
+                </div>
+                <div class="div">
+                  <p class="title-nft-list">Highest Bid</p>
+                  <% if collectible.bids.highest.nil? %>
+                    <p> -- €</p>
+                  <% else %>
+                    <p><%= collectible.bids.highest.bid_price %> €</p>
+                  <% end %>
+                </div>
+                <div class="div">
+                  <p class="title-nft-list">Nbre NFT</p>
+                  <p><%= collectible.nft_number %></p>
+                </div>
+                <div class="div">
+                  <p class="title-nft-list">Val. Bid</p>
+                  <p><%#= collectible.bid.bid_price %></p>
+                </div>
+
+                <div class="div">
+                  <p class="title-nft-list">Valo.</p>
+                  <p><i class="fas fa-chart-line"></i> 18%</p>
+                </div>
+                <div class="div">
+                <%= link_to 'Modifier', collectible_path(collectible)  %>
+                </div>
+              </div>
+           <% end %>
+         </div>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="asks">
+      <div class="nft-container">
+        <div class="my-nfts">
+          <h4>MES ASKs</h4>
+          <p class="description">Retrouvez l'intégralité de vos ASKs dans cette section</p>
+          <div class="list">
+            <% @asked_collectibles.each do |collectible| %>
+              <div class="div nft-list-transaction px-3 mt-3">
+                <div class="div">
+                  <p class="title-nft-list">Nom</p>
+                  <p class="nft-title"> <%= collectible.model %></p>
+                </div>
+                <div class="div">
+                  <%= cl_image_tag collectible.photo.key, class: "avatar-large"%>
+                </div>
+                <div class="div">
+                  <p class="title-nft-list">Catégorie</p>
+                  <p><%= collectible.category %></p>
+                </div>
+                <div class="div">
+                  <p class="title-nft-list">Ref.</p>
+                  <p><%= collectible.reference %></p>
+                </div>
+                <div class="div">
+                  <p class="title-nft-list">Lowest Ask</p>
+                  <% if collectible.bids.highest.nil? %>
+                    <p> -- €</p>
+                  <% else %>
+                    <p><%= collectible.bids.highest.bid_price %> €</p>
+                  <% end %>
+                </div>
+                <div class="div">
+                  <p class="title-nft-list">Nbre NFT</p>
+                  <p><%= collectible.nft_number %></p>
+                </div>
+                <div class="div">
+                  <p class="title-nft-list">Val. Ask </p>
+                  <p><%#= collectible.ask.ask_price %></p>
+                </div>
+
+                <div class="div">
+                  <p class="title-nft-list">Valo.</p>
+                  <p><i class="fas fa-chart-line"></i> 18%</p>
+                </div>
+                <div class="div">
+                  <%= link_to 'Modifier', collectible_path(collectible)  %>
+                </div>
+              </div>
+            <% end %>
+          </div>
+        </div>
+      </div>
+    </div>
 
   </div>
+
+
+
 
 </div>
