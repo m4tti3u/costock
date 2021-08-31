@@ -47,10 +47,11 @@ photo1 = URI.open('https://images.stockx.com/360/Air-Jordan-1-OG-Chicago-1985/Im
 photo2 = URI.open('https://images.stockx.com/360/Air-Jordan-1-OG-Chicago-1985/Images/Air-Jordan-1-OG-Chicago-1985/Lv2/img05.jpg?auto=format,compress&w=559&q=90&dpr=2&updated_at=1606316360')
 photo3 = URI.open('https://images.stockx.com/360/Air-Jordan-1-OG-Chicago-1985/Images/Air-Jordan-1-OG-Chicago-1985/Lv2/img07.jpg?auto=format,compress&w=559&q=90&dpr=2&updated_at=1606316360')
 photo4 = URI.open('https://images.stockx.com/360/Air-Jordan-1-OG-Chicago-1985/Images/Air-Jordan-1-OG-Chicago-1985/Lv2/img11.jpg?auto=format,compress&w=559&q=90&dpr=2&updated_at=1606316360')
-photo5 = URI.open('https://images.stockx.com/360/Air-Jordan-1-OG-Chicago-1985/Images/Air-Jordan-1-OG-Chicago-1985/Lv2/img18.jpg?auto=format,compress&w=559&q=90&dpr=2&updated_at=1606316360')
-photo6 = URI.open('https://images.stockx.com/360/Air-Jordan-1-OG-Chicago-1985/Images/Air-Jordan-1-OG-Chicago-1985/Lv2/img19.jpg?auto=format,compress&w=559&q=90&dpr=2&updated_at=1606316360')
-photo7 = URI.open('https://images.stockx.com/360/Air-Jordan-1-OG-Chicago-1985/Images/Air-Jordan-1-OG-Chicago-1985/Lv2/img21.jpg?auto=format,compress&w=559&q=90&dpr=2&updated_at=1606316360')
-photo8 = URI.open('https://images.stockx.com/360/Air-Jordan-1-OG-Chicago-1985/Images/Air-Jordan-1-OG-Chicago-1985/Lv2/img24.jpg?auto=format,compress&w=559&q=90&dpr=2&updated_at=1606316360')
+photo5 = URI.open('https://images.stockx.com/360/Air-Jordan-1-OG-Chicago-1985/Images/Air-Jordan-1-OG-Chicago-1985/Lv2/img15.jpg?auto=format,compress&w=559&q=90&dpr=2&updated_at=1606316360')
+photo6 = URI.open('https://images.stockx.com/360/Air-Jordan-1-OG-Chicago-1985/Images/Air-Jordan-1-OG-Chicago-1985/Lv2/img18.jpg?auto=format,compress&w=559&q=90&dpr=2&updated_at=1606316360')
+photo7 = URI.open('https://images.stockx.com/360/Air-Jordan-1-OG-Chicago-1985/Images/Air-Jordan-1-OG-Chicago-1985/Lv2/img19.jpg?auto=format,compress&w=559&q=90&dpr=2&updated_at=1606316360')
+photo8 = URI.open('https://images.stockx.com/360/Air-Jordan-1-OG-Chicago-1985/Images/Air-Jordan-1-OG-Chicago-1985/Lv2/img21.jpg?auto=format,compress&w=559&q=90&dpr=2&updated_at=1606316360')
+photo9 = URI.open('https://images.stockx.com/360/Air-Jordan-1-OG-Chicago-1985/Images/Air-Jordan-1-OG-Chicago-1985/Lv2/img24.jpg?auto=format,compress&w=559&q=90&dpr=2&updated_at=1606316360')
 collectible3.photos.attach(io: photo1, filename: 'jordanog1.jpg', content_type: 'image/jpg')
 collectible3.photos.attach(io: photo2, filename: 'jordanog2.jpg', content_type: 'image/jpg')
 collectible3.photos.attach(io: photo3, filename: 'jordanog3.jpg', content_type: 'image/jpg')
@@ -59,6 +60,7 @@ collectible3.photos.attach(io: photo5, filename: 'jordanog5.jpg', content_type: 
 collectible3.photos.attach(io: photo6, filename: 'jordanog6.jpg', content_type: 'image/jpg')
 collectible3.photos.attach(io: photo7, filename: 'jordanog7.jpg', content_type: 'image/jpg')
 collectible3.photos.attach(io: photo8, filename: 'jordanog8.jpg', content_type: 'image/jpg')
+collectible3.photos.attach(io: photo9, filename: 'jordanog9.jpg', content_type: 'image/jpg')
 collectible3.save
 
 collectible4 = Collectible.create!(category: 'Cartes', brand: 'Pokemon', model: 'Dracofeu 1st edition', reference: 'PK-DCF-1ST-PGA10', retail_price: 1.0, resell_value: 500000.0, description: 'Une carte mythique pour toutes les générations fans de Pokemon dans un état immaculé', nft_number: 10000, user_id: '3')
