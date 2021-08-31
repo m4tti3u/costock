@@ -52,10 +52,26 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: flex-start;
+  align-items: center;
   margin: 0 auto;
 }
+.flex-grow{
+  flex-grow: 1;
+  color: #044A7E;
+  font-size: 32px;
+}
 
+.job-advice{
+  font-size: 24px;
+  opacity: 20%;
+  margin-top: 50px;
+  color: #0369B4;
+}
+
+.paragraph-advice{
+  color: #0369B4;
+  text-align: center;
+}
 .card-collectibles-index {
   width: 340px;
   height: 440px;
