@@ -30,10 +30,12 @@ import AOS from "aos";
 // Internal imports, e.g:
 import { initSelect2 } from '../components/init_select2';
 import { changeNavbarOnScroll } from '../components/change_navbar';
+import { scrollDownWithChevron } from '../components/chevron_scroll';
 
 document.addEventListener('turbolinks:load', () => {
   // Call your functions here, e.g:
   initSelect2();
   changeNavbarOnScroll();
+  scrollDownWithChevron();
   AOS.init();
 });
