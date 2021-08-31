@@ -73,6 +73,11 @@ ActiveRecord::Schema.define(version: 2021_08_26_125903) do
     t.index ["user_id"], name: "index_collectibles_on_user_id"
   end
 
+  create_table "collectibles_spiders", force: :cascade do |t|
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
   create_table "nfts", force: :cascade do |t|
     t.bigint "collectible_id", null: false
     t.float "introduction_price"
