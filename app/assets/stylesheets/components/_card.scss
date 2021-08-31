@@ -25,12 +25,16 @@
     -ms-transform:scale(1.25); /* IE 9 */
     -o-transform:scale(1.25); /* Opera */
     transform:scale(1.05);
-
+  }
+  img {
+    height: 80%;
+    // background-size: contain;
+    object-fit: contain;
   }
 }
 
 .card-img {
-  margin-top: 100px;
+  margin-top: 0px;
 }
 
 .grid-card {
@@ -65,6 +69,18 @@
   border-radius: 22px;
   margin: 0 auto;
   overflow: hidden;
+  -webkit-transition: all 0.5s ease; /* Safari and Chrome */
+  -moz-transition: all 0.5s ease; /* Firefox */
+  -ms-transition: all 0.5s ease; /* IE 9 */
+  -o-transition: all 0.5s ease; /* Opera */
+  transition: all 0.5s ease;
+  &:hover {
+    -webkit-transform:scale(1.25); /* Safari and Chrome */
+    -moz-transform:scale(1.25); /* Firefox */
+    -ms-transform:scale(1.25); /* IE 9 */
+    -o-transform:scale(1.25); /* Opera */
+    transform:scale(1.05);
+  }
   .card-top {
     height: 250px;
   }
@@ -96,4 +112,34 @@
   h6 {
     font-weight: 700;
   }
+}
+
+.card-sneakers {
+  position: relative;
+  width: 600px;
+  height: 450px;
+  display: flex;
+  flex-direction: column;
+  border: none;
+}
+.card-sneakers span {
+  position: absolute;
+  top: 0;
+  left: calc(100% / 7 * var(--i));
+  width: calc(100% / 7);
+  height: 100%;
+}
+.card-sneakers img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  pointer-events: none;
+}
+.card-sneakers img:nth-child(2),
+.card-sneakers span:hover + img {
+  opacity: 1;
 }
