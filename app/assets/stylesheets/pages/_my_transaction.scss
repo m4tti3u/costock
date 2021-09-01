@@ -22,11 +22,12 @@
   overflow: hidden;
   height: 55px;
   background: white;
-  box-shadow: 0 8px 11px rgba(0,0,0,0.2);
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
   display: flex;
   justify-content: space-between;
   align-items: center ;
   border-radius: 8px;
+  width: 80vw;
     .nft-title {
       font-weight: 600;
     }
@@ -55,7 +56,6 @@
 .top-cards {
   display: flex;
   justify-content: space-evenly;
-  margin-bottom: 50px;
 }
 
 .portfolio {
@@ -64,7 +64,7 @@
   height: 50px;
   width: 350px;
   background: white;
-  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
   justify-content: center;
   align-items: center;
   margin: 6px;
@@ -112,7 +112,7 @@
   overflow: hidden;
   width: 750px;
   background: white;
-  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -140,15 +140,20 @@
     justify-content: center;
   }
 
-  .nft-container {
-    display: flex;
-    justify-content: center;
-  }
-
   .bids-asks {
     width: 900px;
     margin-top: 24px;;
   }
 .testchart{
   width: 800px;
+}
+
+
+
+#home-tab {
+  border-radius: 10px 0px 0px 0px;
+}
+
+#profile-tab {
+  border-radius: 0px 10px 0px 0px;
 }

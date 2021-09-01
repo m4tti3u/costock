@@ -1,0 +1,54 @@
+<div class="list">
+  <% @collectibles.each do |collectible| %>
+    <div class="div nft-list-transaction px-3 mt-3">
+
+      <div class="div">
+        <p class="title-nft-list">Nom</p>
+        <p class="nft-title"> <%= collectible.model %></p>
+      </div>
+
+      <div class="div">
+        <%= cl_image_tag collectible.photos.first.key, class: "avatar-large"%>
+      </div>
+
+      <div class="div">
+        <p class="title-nft-list">Catégorie</p>
+        <p><%= collectible.category %></p>
+      </div>
+
+      <div class="div">
+        <p class="title-nft-list">Ref.</p>
+        <p><%= collectible.reference %></p>
+      </div>
+
+      <div class="div">
+        <p class="title-nft-list">Val. Resell</p>
+        <p><%= collectible.resell_value %> €</p>
+      </div>
+
+      <div class="div">
+        <p class="title-nft-list">Nbre NFT</p>
+        <p><%= collectible.nft_number %></p>
+      </div>
+
+      <div class="div">
+        <p class="title-nft-list">Valo. </p>
+        <% if collectible.bids.highest.nil? %>
+          <p> -- €</p>
+        <% else %>
+          <p><%= collectible.bids.highest.bid_price %> €</p>
+        <% end %>
+      </div>
+
+      <div class="div">
+        <p class="title-nft-list">Valo.</p>
+        <p><i class="fas fa-chart-line"></i> 18%</p>
+      </div>
+
+      <div class="div">
+        <%= link_to 'Modifier', collectible_path(collectible)  %>
+      </div>
+
+    </div>
+  <% end %>
+</div>
