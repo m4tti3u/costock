@@ -34,10 +34,11 @@ class CollectiblesController < ApplicationController
   end
 
   def create
-    @collectible = collectible.new(collectibles_params)
+    @collectible = Collectible.new(collectibles_params)
     @collectible.user = current_user
     if @collectible.save
-      redirect_to new_collectible_path(@collectible)
+      flash[:notice] = "Votre collectible a bien été ajouté"
+      redirect_to root_path
     else
       render :new
     end
@@ -46,6 +47,6 @@ class CollectiblesController < ApplicationController
   private
 
   def collectibles_params
-    params.require(:collectible).permit(:category, :brand, :model, :reference, :retail_price, :resell_value, :description, :user_id, :nft_number)
+    params.require(:collectible).permit(:category, :brand, :model, :nft_number)
   end
 end

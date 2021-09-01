@@ -130,6 +130,15 @@
   }
 }
 
+.card-place-bid {
+  flex-direction: column;
+  align-items: center;
+  margin-top: 15px;
+}
+.card-header{
+  background-color:white ; //white
+  border: 1px solid black;
+
 .card-sneakers {
   position: relative;
   width: 600px;
@@ -158,4 +167,5 @@
 .card-sneakers img:nth-child(2),
 .card-sneakers span:hover + img {
   opacity: 1;
+  }
 }
