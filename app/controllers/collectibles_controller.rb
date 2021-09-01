@@ -2,10 +2,7 @@ class CollectiblesController < ApplicationController
   skip_before_action :authenticate_user!, only: [:index, :show]
 
   def index
-    # @category_array = []
-    # Collectible.all.each do |collectible|
-    #   @category_array << collectible.category unless @category_array.include?(collectible.category)
-    # end
+    @category_array = Collectible.pluck(:category).uniq
     @collectibles = Collectible.all
     if params[:query].present?
       @collectibles = @collectibles.search_by_brand_and_model(params[:query])
