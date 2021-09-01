@@ -54,7 +54,7 @@
                   <p class="nft-title"> <%= collectible.model %></p>
                 </div>
                 <div class="div">
-                <%= cl_image_tag collectible.photo.key, class: "avatar-large"%>
+                <%= cl_image_tag collectible.photos.first.key, class: "avatar-large"%>
                 </div>
                 <div class="div">
                   <p class="title-nft-list">Catégorie</p>
