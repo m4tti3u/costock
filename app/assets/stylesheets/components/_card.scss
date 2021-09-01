@@ -140,6 +140,7 @@
   border: 1px solid black;
   height: 120px;
   width: 600px;
+}
 
 .card-sneakers {
   position: relative;
@@ -169,7 +170,6 @@
 .card-sneakers img:nth-child(2),
 .card-sneakers span:hover + img {
   opacity: 1;
-  }
 }
 
 
