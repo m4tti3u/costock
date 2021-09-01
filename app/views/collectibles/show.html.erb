@@ -5,7 +5,12 @@
       <div class="collectible-show-container">
         <div class="collectible-show-card justify-content-center" >
           <h1> <%= @collectible.model %> </h1>
-          <%= cl_image_tag @collectible.photos.first.key %>
+          <div class="card card-sneakers">
+            <% @collectible.photos.each_with_index do |photo, index| %>
+              <span style="--i:<%= index %>;"></span>
+              <%= cl_image_tag photo.key %>
+            <% end %>
+          </div>
           <div class="description-product"></div>
           <div id="description-product-title">
             <h3>Description Produit</h3>
