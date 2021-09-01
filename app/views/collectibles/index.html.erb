@@ -49,7 +49,7 @@
     <% @collectibles.each do |collectible| %>
       <div class="card-collectibles-index position-relative">
         <div class="card-top" >
-            <%= cl_image_tag collectible.photos.first.key unless collectible.photos.first.nil? %>
+            <%= cl_image_tag collectible.photos.first.key unless collectible.photos.first.present? %>
         </div>
         <p class="text-center" ><%= link_to collectible.model, collectible_path(collectible), class: "stretched-link text-decoration-none" %></p>
         <div class="d-flex justify-content-between w-100 px-3">
