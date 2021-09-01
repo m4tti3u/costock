@@ -31,7 +31,7 @@ import AOS from "aos";
 import { initSelect2 } from '../components/init_select2';
 import { changeNavbarOnScroll } from '../components/change_navbar';
 
-import { switchBidAsk } from '../components/switch_portfolio';
+// import { switchBidAsk } from '../components/switch_portfolio';
 
 import { scrollDownWithChevron } from '../components/chevron_scroll';
 
@@ -42,5 +42,5 @@ document.addEventListener('turbolinks:load', () => {
   changeNavbarOnScroll();
   AOS.init();
   scrollDownWithChevron();
-  switchBidAsk();
+  // switchBidAsk();
 });
