@@ -4,7 +4,7 @@
   <title>We're sorry, but something went wrong (500)</title>
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <style>
-  .rails-default-error-page {
+  /* .rails-default-error-page {
     background-color: #EFEFEF;
     color: #2E2F30;
     text-align: center;
@@ -50,17 +50,50 @@
     border-top-color: #DADADA;
     color: #666;
     box-shadow: 0 3px 8px rgba(50, 50, 50, 0.17);
+  } */
+  .container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
+
+  @import url(https://fonts.googleapis.com/css?family=Roboto:400,100,300,500);
+
+body {
+  background-color: rgba(3, 134, 228, 1);
+  color: #fff;
+  font-size: 100%;
+  line-height: 1.5;
+  font-family: "Roboto", sans-serif;
+}
+  p {
+  font-size: 2em;
+  text-align: center;
+  font-weight: 100;
+}
+
+h1 {
+  text-align: center;
+  font-size: 3em;
+  font-weight: 100;
+  text-shadow: #0062cc 1px 1px, #0062cc 2px 2px, #0062cc 3px 3px, #0062cd 4px 4px, #0062cd 5px 5px, #0062cd 6px 6px, #0062cd 7px 7px, #0062ce 8px 8px, #0063ce 9px 9px, #0063ce 10px 10px, #0063ce 11px 11px, #0063cf 12px 12px, #0063cf 13px 13px, #0063cf 14px 14px, #0063cf 15px 15px, #0063d0 16px 16px, #0064d0 17px 17px, #0064d0 18px 18px, #0064d0 19px 19px, #0064d1 20px 20px, #0064d1 21px 21px, #0064d1 22px 22px, #0064d1 23px 23px;
+}
+img{
+  height: 400px;
+}
   </style>
 </head>
 
 <body class="rails-default-error-page">
   <!-- This file lives in public/500.html -->
-  <div class="dialog">
-    <div>
-      <h1>We're sorry, but something went wrong.</h1>
+  <div class="container">
+    <div class="dialog">
+      <div>
+        <h1>500</h1>
+        <p>Oops! Something is wrong.</p>
+      </div>
     </div>
-    <p>If you are the application owner check the logs for more information.</p>
+    <img src="images/undraw_bear_market_ania.svg" alt="">
   </div>
 </body>
 </html>
