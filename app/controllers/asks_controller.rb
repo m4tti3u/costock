@@ -26,6 +26,7 @@ class AsksController < ApplicationController
       @transaction = Transaction.create(user: current_user, nft: @nft)
       redirect_to my_transactions_path
     else
+      raise
       flash[:alert] = 'Transaction impossible'
       @collectible = @ask.collectible
       @lowest_ask = @collectible.asks.lowest
