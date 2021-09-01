@@ -21,6 +21,9 @@ class AsksController < ApplicationController
   def update
     @ask = Ask.find(params[:id])
     @nft = Nft.where(collectible: @ask.collectible, user: @ask.user).first
+    if Bid.where(collectible: @ask.collectible, user: current_user).first.present?
+      Bid.where(collectible: @ask.collectible, user: current_user).first.update(progress: 'done')
+    end
     if @nft.present? && @ask.update(progress: 'done')
       @nft.update(user: current_user)
       @transaction = Transaction.create(user: current_user, nft: @nft)

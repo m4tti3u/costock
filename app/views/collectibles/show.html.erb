@@ -84,10 +84,6 @@
       <% end %>
 
 
-
-
-
-
       <% if @highest_bid.present? && @highest_bid.user != current_user %>
           <div class="card-nft-show">
 
@@ -136,7 +132,7 @@
             <div class="card-header" id="headingTwo">
               <h6 class="mb-0">
 
-                <% if @highest_bid.bid_price.present? %>
+                <% if @highest_bid.present? %>
                   <p>Highest Bid : <%= @highest_bid.bid_price %> €</p>
                   <% if @collectible.nfts.where(user_id: current_user).first != nil %>
                     <button class="btn-ask-cell" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
