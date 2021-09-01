@@ -90,22 +90,15 @@
             <div class="card-header" id="headingTwo">
               <h6>
                   <p>Highest Bid : <%= @highest_bid.bid_price %> €</p>
-                  <button class="btn-sell-ask" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
-                  <p>Vendre ou faire une proposition</p>
-                </button>
               </h6>
-            </div>
-
-                <%
-=begin%>
- <% if @collectible.nfts.where(user_id: current_user).first != nil %>
-                  <button class="btn-ask-cell" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+            <% if @collectible.nfts.where(user_id: current_user).first != nil %>
+                  <button class="btn-sell-ask" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
                     <p>Vendre ou demander un prix</p>
                   </button>
                 <% end %>
             </div>
-<%
-=end%>
+            </div>
+
 
             <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
               <div class="card-body">
@@ -135,15 +128,15 @@
                 <% if @highest_bid.present? %>
                   <p>Highest Bid : <%= @highest_bid.bid_price %> €</p>
                   <% if @collectible.nfts.where(user_id: current_user).first != nil %>
-                    <button class="btn-ask-cell" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
+                    <button class="btn-sell-ask" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
                     <p>Demander un prix</p>
                     </button>
                   <% end %>
 
                 <% else %>
                   <p>Highest Bid : -- €</p>
-                  <button class="btn-ask-cell" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
-                  <p>Demander un prix</p>
+                  <button class="btn-sell-ask" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
+                    <p>Demander un prix</p>
                   </button>
                 <% end %>
               </h6>
@@ -167,10 +160,6 @@
 </div>
 
   <%= area_chart(vendredi: 12, samedi: 6, dimanche:5, lundi: 7, mardi: 2, mercredi: 6, jeudi: 10) %>
-  <%
-=begin%>
- <p> Historique des prix </p>
-<%
-=end%>
+
 
 </div>
