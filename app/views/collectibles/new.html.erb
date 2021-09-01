@@ -42,7 +42,12 @@
     <h1 class='title-presentation pt-3 text-center'>Vendez Votre Collectible</h1>
     <%= simple_form_for @collectible do |f| %>
       <%= f.input :category, collection: Collectible.pluck(:category).uniq, label: 'Selectionner une catégorie', input_html: { class: 'select2' } %>
-      <%= f.input :brand, collection: Collectible.pluck(:brand).uniq, label: 'Selectionner une marque', input_html: { class: 'select2' }%>
+      <div id="brand-general">
+        <%= f.input :brand, collection: Collectible.pluck(:brand).uniq+["Autre"], label: 'Selectionner une marque', input_html: { class: 'select2' }%>
+      </div>
+      <div id="brand-personnalise" class="d-none">
+        <%= f.input :brand %>
+      </div>
       <%= f.input :model, label: "Modèle" %>
       <%= f.input :nft_number, label: "Nombre de NFTs souhaité en échange de votre paire" %>
       <%= f.button :submit, "J'envoie ma paire" , class: "btn-login" %>

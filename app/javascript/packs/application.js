@@ -43,4 +43,13 @@ document.addEventListener('turbolinks:load', () => {
   AOS.init();
   scrollDownWithChevron();
   // switchBidAsk();
+  // console.log(document.querySelector("#new_collectible"));
+  // document.querySelector("#new_collectible").addEventListener('submit', function(event){
+  //   event.preventDefault();
+  //   if ((document.querySelector("#select2-collectible_brand-container").title) === "Autre") {
+  //     document.getElementById("brand-general").classList.add("d-none");
+  //     document.getElementById("brand-personnalise").classList.remove("d-none");
+  //   };
+  // });
+
 });

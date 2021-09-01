@@ -2,13 +2,13 @@ class CollectiblesController < ApplicationController
   skip_before_action :authenticate_user!, only: [:index, :show]
 
   def index
-    @category_array = []
-    Collectible.all.each do |collectible|
-      @category_array << collectible.category unless @category_array.include?(collectible.category)
-    end
-    @collectibles = Collectible.all
+    # @category_array = []
+    # Collectible.all.each do |collectible|
+    #   @category_array << collectible.category unless @category_array.include?(collectible.category)
+    # end
+    @collectibles = Collectible.where(validation: true)
     if params[:query].present?
-      @collectibles = Collectible.search_by_brand_and_model(params[:query])
+      @collectibles = @collectibles.search_by_brand_and_model(params[:query])
     end
     if params[:collectible_filters].present?
         @category_filter = params[:collectible_filters][:category]
@@ -36,8 +36,9 @@ class CollectiblesController < ApplicationController
   def create
     @collectible = Collectible.new(collectibles_params)
     @collectible.user = current_user
+    @collectible.validation = false
     if @collectible.save
-      flash[:notice] = "Votre collectible a bien été ajouté"
+      flash[:notice] = "Votre collectible est en cours de validation"
       redirect_to root_path
     else
       render :new
