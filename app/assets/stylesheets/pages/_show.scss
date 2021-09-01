@@ -1,51 +1,68 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
 
-.card-nft-show{
-  margin-top: 30px;
-  margin-left: 25px;
+// objet
+
+
+// les buttons
+.btn-create-ask{
+  width: 100px;
+  background-color:#DA2C16;
+  color: white;
+  border-radius: 0%;
+
+
 }
-.card-header{
-  background-color:white ;
+
+.btn-create-sell{
+  width: 100px;
+  background-color:#DA2C16;
+  color: white
+
+}
+// .btn-create-bid{
+//   width: 100px;
+//   background-color:#00492F;
+//   border: none;
+//   border-radius: 0%;
+//   display: flex;
+//   //margin-left: 10px;
+// }
+
+.btn-create-buy{
+  width: 100px;
+  background-color:#00492F;
+  border: none;
+  color: white;
 }
 
  .btn-buy-bid{
-  background: linear-gradient(to right, #00492F 50%, #006340 50%);
-  background-size: 200% 100%;
+  background: #00492F 50% ;
+  background-size: 100% 100%;
   color: white;
-  padding: 5px;
+  padding-top: 16px;
   background-position: right bottom;
-  transition: all .5s ease-out;
-  border-radius: 20px;
-  width: 200px;
-  &:hover {
-    background-position: left bottom;
-    text-decoration: none;
-    }
-  }
+  border: none;
+  //width: 200px;
+ }
 
   .btn-ask-cell{
-  background: linear-gradient(to right, #DA2C16 50%, #AE1E0B 50%);
-  background-size: 200% 100%;
+  background:  #DA2C16 50%;
+  background-size: 100% 100%;
   color: white;
-  padding: 5px ;
+  padding-top: 16px ;
   background-position: right bottom;
-  transition: all .5s ease-out;
-  border-radius: 20px;
-  width: 200px;
-  &:hover {
-    background-position: left bottom;
-    text-decoration: none;
-    }
+  border: none;
+  //width: 170px;
+  text-align: center;
   }
-
-
 
 
 .collectible-show-container{
   border-radius: 10px;
-  background-color: #F4F4F4;
   margin-top: 10px;
   margin-right: 10px;
+  //border: 1px solid black; // a enlever
+  box-shadow: black;
 
   h1{
     font-size: 24px;
@@ -54,11 +71,13 @@
   }
   p{
     color: gray;
+    text-align: justify;
   }
 }
 
   .description-product{
-    border-top: 3px solid grey;
+    border-top: 1px solid grey;
+    width: 500;
 
  }
 
@@ -70,4 +89,17 @@ color: white;
 font-size: 14px;
 margin-top: 4px;
 margin-left: 4px;
+}
+
+#accordion{
+border: 1px solid black;
+// display: flex;
+justify-content: center;
+align-items: center;
+text-align: center;
+position: absolute;
+margin-top: 100px;
+margin-left: 100px;
+
+//width: 100px;
 }
