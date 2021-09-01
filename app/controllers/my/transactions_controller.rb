@@ -30,7 +30,7 @@ class My::TransactionsController < ApplicationController
   end
 
   def user_bids
-    bids = current_user.bids
+    bids = current_user.bids.where(progress: nil)
     collectibles = []
     bids.each do |bid|
       bid = Collectible.find(bid.collectible_id)
@@ -40,7 +40,7 @@ class My::TransactionsController < ApplicationController
   end
 
   def user_asks
-    asks = current_user.asks
+    asks = current_user.asks.where(progress: nil)
     collectibles = []
     asks.each do |ask|
       ask = Collectible.find(ask.collectible_id)

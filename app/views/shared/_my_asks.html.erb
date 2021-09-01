@@ -37,7 +37,7 @@
 
       <div class="div">
         <p class="title-nft-list">Val. Ask </p>
-        <p><%#= collectible.ask.ask_price %></p>
+        <p><%= collectible.asks.where(user_id: current_user).first.ask_price %> €</p>
       </div>
 
       <div class="div">

@@ -58,7 +58,11 @@
         </div>
         <div class="d-flex justify-content-between w-100 px-3">
           <p class="font-weight-bold">Prix Nft :</p>
-          <p ><%= collectible.bids.highest.bid_price %> €</p>
+          <% if collectible.bids.highest != nil %>
+            <p><%= collectible.bids.highest.bid_price %> €</p>
+          <% else %>
+            <p> -- €</p>
+          <% end %>
         </div>
       </div>
     <% end %>

@@ -37,7 +37,7 @@
 
       <div class="div">
         <p class="title-nft-list">Val. Bid</p>
-        <p><%#= collectible.bid.bid_price %></p>
+        <p><%= collectible.bids.where(user_id: current_user).first.bid_price %> €</p>
       </div>
 
       <div class="div">
