@@ -21,7 +21,7 @@
          </div>
    <div class="col-5 position-relative">
     <div id="accordion">
-      <% if @lowest_ask.ask_price.present? && @lowest_ask.user != current_user %>
+      <% if @lowest_ask.present? && @lowest_ask.user != current_user %>
           <div class="card-nft-show ">
             <div class="card-header" id="headingOne">
               <h6>
@@ -47,7 +47,7 @@
         <div class="card-nft-show">
           <div class="card-header" id="headingOne">
             <h6 class="mb-0">
-              <% if @lowest_ask.ask_price.present? %>
+              <% if @lowest_ask.present? %>
                 <p>Lowest Ask : <%= @lowest_ask.ask_price %> €</p>
                 <button class="btn buy-bid" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
                   <p>Faire une offre</p>
