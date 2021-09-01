@@ -22,15 +22,23 @@
   text-decoration: none;
   color: white;
 }
+.btn-buy-bid{
+background: linear-gradient(85.05deg, #2C8F42 14.68%, #31E8A6 102.39%);
+border-radius: 39px;
+text-decoration: none !important;
+  color: white;
+  border: none;
+  text-align: center;
+}
 
-
-.btn-buy-bid, .btn-sell-ask {
+.btn-sell-ask {
   text-decoration: none !important;
   color: white;
+  background: linear-gradient(81.61deg, #C95D37 24.91%, #FF7F52 77.24%);
+  border-radius: 39px;
 
-  &:hover {
-    color: white;
-  }
+  border: none;
+  text-align: center;
 }
 
 .buy-bid {
@@ -93,29 +101,27 @@
   color: white;
 }
 .btn-create-ask {
-  text-decoration: none;
-  border-radius: 24px;
-  background-color: rgb(218, 44, 22);
-  color: white;
-  margin-bottom: 4px;
+  background: linear-gradient(85.61deg, #5B609E 6.23%, #828BEF 122.02%);
+  border-radius: 39px;
 }
 
-.btn-buy-now {
-  text-decoration: none;
-  border-radius: 24px;
-  background-color: rgb(0, 99, 64);
-  color: white;
-
+.btn-buy{
+ background: rgba(4, 74, 126, 1);
+border-radius: 39px;
+width: 100px;
+color: white;
 }
 .btn-create-bid {
-  text-decoration: none;
-  //border-radius: 24px;"
-  background-color: rgb(0, 99, 64);
-  color: white;
-  margin-bottom: 4px;
-
+ background: linear-gradient(85.01deg, #038AD4 12.33%, #62C7FF 104.82%);
+border-radius: 39px;
+color: white;
 }
-
+.btn-create-sell{
+background-color: #F97C4F;
+border-radius: 39px;
+color: white;
+width: 100px;
+}
 .btn-transaction {
   color: #4A4A4A;
   border: 1px solid #4A4A4A;
