@@ -34,12 +34,13 @@
 }
 
 .buy-bid {
-  border-radius: 4px;
   background-color: rgb(0, 99, 64);
   margin: 2px;
   color: white;
   font-weight: 400;
   padding: 2px;
+  width: 200px;
+  text-align: center;
 
   &:hover {
     background-color: rgb(0, 73, 47);
@@ -47,13 +48,13 @@
 }
 
 .ask-cell {
-  border-radius: 4px;
+
   background-color: rgb(218, 44, 22);
   margin: 2px;
   color: white;
   font-weight: 400;
   padding: 2px;
-
+  text-align: center;
   &:hover {
     background-color: rgb(174, 30, 11);
   }
@@ -108,7 +109,7 @@
 }
 .btn-create-bid {
   text-decoration: none;
-  border-radius: 24px;
+  //border-radius: 24px;"
   background-color: rgb(0, 99, 64);
   color: white;
   margin-bottom: 4px;
