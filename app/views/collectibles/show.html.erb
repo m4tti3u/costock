@@ -5,7 +5,7 @@
       <div class="collectible-show-container">
         <div class="collectible-show-card justify-content-center" >
           <h1> <%= @collectible.model %> </h1>
-          <%= cl_image_tag @collectible.photos.first.key %>
+          <%= cl_image_tag @collectible.photos.first.key , class:"show-img" %>
           <div class="description-product"></div>
           <div id="description-product-title">
             <h3>Description Produit</h3>
@@ -21,8 +21,10 @@
          </div>
    <div class="col-5 position-relative">
     <div id="accordion">
+
       <% if @lowest_ask.present? && @lowest_ask.user != current_user %>
           <div class="card-nft-show ">
+
             <div class="card-header" id="headingOne">
               <h6>
                 <p>Lowest Ask : <%= @lowest_ask.ask_price %> €</p>
@@ -31,9 +33,15 @@
                 </button>
               </h6>
             </div>
+
             <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
               <div class="card-body">
+              <div >
                 <%= render 'asks/form', ask: @lowest_ask %>
+                <div class="price-size">
+                  <%= @lowest_ask.ask_price %> €
+                </div>
+              </div>
                 <%= simple_form_for [@collectible, @bid], :method => :post do |f| %>
                   <div class="card-place-bid d-flex">
                   <%= f.input :bid_price, placeholder: "My Bid price", label: false %>
@@ -43,8 +51,11 @@
               </div>
             </div>
           </div>
+
       <% else %>
+
         <div class="card-nft-show">
+
           <div class="card-header" id="headingOne">
             <h6 class="mb-0">
               <% if @lowest_ask.present? %>
@@ -60,6 +71,7 @@
               <% end %>
             </h6>
           </div>
+
           <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
             <div class="card-body">
               <%= simple_form_for [@collectible, @bid], :method => :post do |f| %>
@@ -71,24 +83,43 @@
         </div>
       <% end %>
 
-      <% if @highest_bid.bid_price.present? && @highest_bid.user != current_user %>
+
+
+
+
+
+      <% if @highest_bid.present? && @highest_bid.user != current_user %>
           <div class="card-nft-show">
+
             <div class="card-header" id="headingTwo">
-              <h6 class="mb-0">
+              <h6>
                   <p>Highest Bid : <%= @highest_bid.bid_price %> €</p>
+                  <button class="btn-sell-ask" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
+                  <p>Vendre ou faire une proposition</p>
+                </button>
               </h6>
-                <% if @collectible.nfts.where(user_id: current_user).first != nil %>
+            </div>
+
+                <%
+=begin%>
+ <% if @collectible.nfts.where(user_id: current_user).first != nil %>
                   <button class="btn-ask-cell" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
                     <p>Vendre ou demander un prix</p>
                   </button>
                 <% end %>
             </div>
+<%
+=end%>
+
             <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
               <div class="card-body">
                   <%= simple_form_for @highest_bid do |f| %>
                     <%#= f.input :bid_price, label: false %>
                     <div class="container-place-sell mb-3 d-flex">
                       <%= f.button :submit, 'Sell', class: "btn-create-sell" %>
+                      <div class="price-size">
+                        <%= @highest_bid.bid_price %> €
+                      </div>
                     </div>
                   <% end %>
                   <%= simple_form_for [@collectible, @ask], :method => :post do |f| %>
@@ -98,40 +129,52 @@
               </div>
             </div>
           </div>
+
       <% else %>
+
         <div class="card-nft-show">
-            <div class="card-header" id="headingOne">
+            <div class="card-header" id="headingTwo">
               <h6 class="mb-0">
+
                 <% if @highest_bid.bid_price.present? %>
                   <p>Highest Bid : <%= @highest_bid.bid_price %> €</p>
                   <% if @collectible.nfts.where(user_id: current_user).first != nil %>
-                    <button class="btn-ask-cell" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                    <button class="btn-ask-cell" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
                     <p>Demander un prix</p>
                     </button>
                   <% end %>
+
                 <% else %>
                   <p>Highest Bid : -- €</p>
-                  <button class="btn-ask-cell" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                  <button class="btn-ask-cell" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
                   <p>Demander un prix</p>
                   </button>
                 <% end %>
               </h6>
             </div>
-            <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
+
+            <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+
               <div class="card-body">
                 <%= simple_form_for [@collectible, @ask], :method => :post do |f| %>
-                <%= f.input :ask_price, placeholder: "My Ask price", label: false %>
-                <%= f.button :submit, 'Place Ask', class: "btn-create-ask" %>
-                </div>
+                  <%= f.input :ask_price, placeholder: "My Ask price", label: false %>
+                  <%= f.button :submit, 'Place Ask', class: "btn-create-ask" %>
                 <% end %>
               </div>
+
             </div>
           </div>
+        </div>
       <% end %>
     </div>
   </div>
 </div>
+
   <%= area_chart(vendredi: 12, samedi: 6, dimanche:5, lundi: 7, mardi: 2, mercredi: 6, jeudi: 10) %>
-  <p> 🔥 Historique des prix 🔥</p>
+  <%
+=begin%>
+ <p> Historique des prix </p>
+<%
+=end%>
 
 </div>

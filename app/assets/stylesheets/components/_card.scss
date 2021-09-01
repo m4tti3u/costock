@@ -139,7 +139,7 @@
   background-color:white ; //white
   border: 1px solid black;
   height: 120px;
-  width: 300px;
+  width: 600px;
 
 .card-sneakers {
   position: relative;
@@ -170,4 +170,12 @@
 .card-sneakers span:hover + img {
   opacity: 1;
   }
+}
+
+
+.card-body {
+  display: flex;
+    /* flex-direction: column; */
+    justify-content: space-around;
+    align-items: center;
 }
