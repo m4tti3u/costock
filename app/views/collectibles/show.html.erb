@@ -1,5 +1,6 @@
 <div class="container">
   <div class="row">
+
     <div class="col-7">
       <div class="collectible-show-container">
         <div class="collectible-show-card justify-content-center" >
@@ -8,16 +9,16 @@
           <div class="description-product"></div>
           <div id="description-product-title">
             <h3>Description Produit</h3>
+            </div>
+              <p>Marque : <%= @collectible.brand %> </p>
+              <p> Description : <%= @collectible.description %> </p>
+              <p>Prix de vente initial du produit : <%= @collectible.retail_price %> €</p>
+              <p>Valeur de resell : <%= @collectible.resell_value %> €</p>
+              <p><%= @collectible.nft_number %> NFT créés </p>
+              <%# <%= link_to 'Retour',  collectibles_path , class: "btn" %>
+            </div>
           </div>
-            <p>Marque : <%= @collectible.brand %> </p>
-            <p> Description : <%= @collectible.description %> </p>
-            <p>Prix de vente initial du produit : <%= @collectible.retail_price %> €</p>
-            <p>Valeur de resell : <%= @collectible.resell_value %> €</p>
-            <p><%= @collectible.nft_number %> NFT créés </p>
-            <%# <%= link_to 'Retour',  collectibles_path , class: "btn" %>
-        </div>
-      </div>
-    </div>
+         </div>
    <div class="col-5 position-relative">
     <div id="accordion">
       <% if @lowest_ask.ask_price.present? && @lowest_ask.user != current_user %>

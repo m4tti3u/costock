@@ -52,10 +52,26 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: flex-start;
+  align-items: center;
   margin: 0 auto;
 }
+.flex-grow{
+  flex-grow: 1;
+  color: #044A7E;
+  font-size: 32px;
+}
 
+.job-advice{
+  font-size: 24px;
+  opacity: 20%;
+  margin-top: 50px;
+  color: #0369B4;
+}
+
+.paragraph-advice{
+  color: #0369B4;
+  text-align: center;
+}
 .card-collectibles-index {
   width: 340px;
   height: 440px;
@@ -114,6 +130,7 @@
   }
 }
 
+<
 .card-place-bid {
   flex-direction: column;
   align-items: center;
@@ -122,4 +139,34 @@
 .card-header{
   background-color:white ; //white
   border: 1px solid black;
+
+.card-sneakers {
+  position: relative;
+  width: 600px;
+  height: 450px;
+  display: flex;
+  flex-direction: column;
+  border: none;
+}
+.card-sneakers span {
+  position: absolute;
+  top: 0;
+  left: calc(100% / 7 * var(--i));
+  width: calc(100% / 7);
+  height: 100%;
+}
+.card-sneakers img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  pointer-events: none;
+}
+.card-sneakers img:nth-child(2),
+.card-sneakers span:hover + img {
+  opacity: 1;
+
 }

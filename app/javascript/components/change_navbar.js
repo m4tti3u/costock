@@ -2,7 +2,6 @@ const changeNavbarOnScroll = () => {
   const navbar = document.querySelector(".navbar-lewagon");
   document.addEventListener("scroll", (event) => {
     const scrollPosition = window.scrollY
-    console.log(scrollPosition)
     if (scrollPosition > 70)
     navbar.classList.add("scrolled")
     else

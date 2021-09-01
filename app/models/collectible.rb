@@ -2,7 +2,7 @@ class Collectible < ApplicationRecord
   belongs_to :user
   has_many :nfts, dependent: :destroy
   has_many :plots, dependent: :destroy
-  has_one_attached :photo
+  has_many_attached :photos
 
 
   has_many :asks, dependent: :destroy
@@ -14,4 +14,15 @@ class Collectible < ApplicationRecord
     using: {
       tsearch: { prefix: true }
     }
+
+  def self.bid
+    self.bids
+        .where(user_id: current_user)
+  end
+
+  def self.ask
+    self.asks
+        .where(user_id: current_user)
+  end
+
 end

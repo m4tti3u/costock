@@ -13,8 +13,12 @@
       <%= image_tag "sneakers.png", class: "sneakers-img"%>
       <%= image_tag "ellipse.png", class: "ellipse-img"%>
     </div>
-
   </div>
+
+  <span class="hero__scroll">
+  Scroll down
+  <i class="chevron bottom"></i>
+	</span>
 
   <div class="container-subtitle">
     <p class="paragraphe-subtitle mt-5">Choisissez parmi nos</p>
@@ -58,7 +62,7 @@
   </div>
 
   <div class="grid-presentation">
-    <div class="grid-card">
+    <div class="grid-card" data-aos="fade-right" data-aos-duration="1000">
       <%= image_tag "social-biography.png"%>
       <div class="text-presentation">
         <h3 class="title-presentation">Créez votre compte</h3>
@@ -67,7 +71,7 @@
       </div>
     </div>
 
-    <div class="grid-card">
+    <div class="grid-card" data-aos="fade-left" data-aos-duration="1000">
       <div class="text-presentation-middle">
         <h3 class="title-presentation">Trouvez les objets collectibles </h3>
         <p class="paragraphe-subtitle">Choisissez les collectibles qui vous intéresse le plus et pariez à la hausse ou à la baisse !</p>
@@ -76,7 +80,7 @@
     </div>
 
 
-     <div class="grid-card">
+     <div class="grid-card" data-aos="fade-right" data-aos-duration="1000">
       <%= image_tag "ellipse.png", class: "ellipse-img ellipse-left"%>
       <%= image_tag "performance.png"%>
       <div class="text-presentation">
@@ -94,22 +98,22 @@
 
   <div class="grid-card mt-5 mb-3">
     <div class="card-advice">
-    <%= image_tag "adviceavatar.png", class:"advice-avatar"%>
-    <h4>KLEPIERRE PDG</h4>
-    <h4>mr. Daan J. Smits</h4>
-    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry</p>
+    <%= image_tag "advicel.jpg", class:"advice-avatar"%>
+    <h3 class="job-advice">Fullstack dev de Branches</h3>
+    <h4 class="flex-grow">Luc Laurent</h4>
+    <p class="paragraph-advice">Les animations sont tarpin bien. Mon portefeuille d'actifs est incroyable.</p>
     </div>
     <div class="card-advice">
-      <%= image_tag "adviceavatar.png", class:"advice-avatar"%>
-      <h4>KLEPIERRE PDG</h4>
-      <h4>mr. Daan J. Smits</h4>
-      <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry</p>
+      <%= image_tag "advicem.jpg", class:"advice-avatar"%>
+      <h3 class="job-advice">PDG de CoStock</h3>
+      <h4 class="flex-grow">Matthieu Assié</h4>
+      <p class="paragraph-advice">Je recommande ce site, j'ai fait des profits assez costoques !!!</p>
     </div>
     <div class="card-advice">
-      <%= image_tag "adviceavatar.png", class:"advice-avatar"%>
-      <h4>KLEPIERRE PDG</h4>
-      <h4>mr. Daan J. Smits</h4>
-      <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry</p>
+      <%= image_tag "advicet.jpg", class:"advice-avatar"%>
+      <h3 class="job-advice">Manager de Poules</h3>
+      <h4 class="flex-grow">Thibault Fitte-Duval</h4>
+      <p class="paragraph-advice">La page produit est parfaite, aucun problème !</p>
 
     </div>
   </div>
