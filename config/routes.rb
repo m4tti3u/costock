@@ -6,7 +6,7 @@ Rails.application.routes.draw do
   resources :nfts, only: [:show, :index]
   resources :asks, only: [:update]
   resources :bids, only: [:update]
-  resources :collectibles, only: [:index, :show, :new] do
+  resources :collectibles, only: [:index, :show, :new, :create] do
     resources :bids, only: [:create]
     resources :asks, only: [:create]
   end
