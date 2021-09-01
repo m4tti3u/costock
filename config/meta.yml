@@ -1,0 +1,5 @@
+meta_product_name: "CoStock"
+meta_title: "CoStock - Collecter. Échanger. Stocker."
+meta_description: "Investissez sur vos objets de collections préférés grace à la technologie NFT"
+meta_image: "homepage.png" # should exist in `app/assets/images/`
+# twitter_account: "@product_twitter_account"   # required for Twitter Cards
