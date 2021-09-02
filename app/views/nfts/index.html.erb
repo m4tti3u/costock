@@ -1,7 +1,0 @@
-<h1>INdex des NFTS</h1>
-
-<% @jordan = Nft.first %>
-<% @collectible = Collectible.find(Nft.first.collectible_id) %>
-<%= @collectible.brand %>
-<%= @collectible.model %>
-<%= @collectible.resell_value %>
