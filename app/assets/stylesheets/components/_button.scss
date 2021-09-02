@@ -1,3 +1,5 @@
+// Login //
+
 .btn-login {
   border: solid 1px;
   color: #038AD4;
@@ -22,51 +24,8 @@
   text-decoration: none;
   color: white;
 }
-.btn-buy-bid{
-background: linear-gradient(85.05deg, #2C8F42 14.68%, #31E8A6 102.39%);
-border-radius: 39px;
-text-decoration: none !important;
-  color: white;
-  border: none;
-  text-align: center;
-}
 
-.btn-sell-ask {
-  text-decoration: none !important;
-  color: white;
-  background: linear-gradient(81.61deg, #C95D37 24.91%, #FF7F52 77.24%);
-  border-radius: 39px;
-
-  border: none;
-  text-align: center;
-}
-
-.buy-bid {
-  background-color: rgb(0, 99, 64);
-  margin: 2px;
-  color: white;
-  font-weight: 400;
-  padding: 2px;
-  width: 200px;
-  text-align: center;
-
-  &:hover {
-    background-color: rgb(0, 73, 47);
-  }
-}
-
-.ask-cell {
-
-  background-color: rgb(218, 44, 22);
-  margin: 2px;
-  color: white;
-  font-weight: 400;
-  padding: 2px;
-  text-align: center;
-  &:hover {
-    background-color: rgb(174, 30, 11);
-  }
-}
+// Homepage //
 
 .btn-stock {
   width: 250px;
@@ -94,34 +53,59 @@ text-decoration: none !important;
 }
 
 
-.btn-sell-now {
-  text-decoration: none;
-  border-radius: 24px;
-  background-color: rgb(218, 44, 22);
+// Show page collectible //
+
+.btn-buy-bid{
+  text-decoration: none !important;
+  background: linear-gradient(85.05deg, #2C8F42 14.68%, #31E8A6 102.39%);
+  border-radius: 10px;
   color: white;
-}
-.btn-create-ask {
-  background: linear-gradient(85.61deg, #5B609E 6.23%, #828BEF 122.02%);
-  border-radius: 39px;
+  border: none;
+  padding: 15px;
+      width: 300px;
 }
 
 .btn-buy{
- background: rgba(4, 74, 126, 1);
-border-radius: 39px;
-width: 100px;
+border: none;
+background-color: #81D2C7;
+border-radius: 10px;
+width: 150px;
 color: white;
 }
 .btn-create-bid {
- background: linear-gradient(85.01deg, #038AD4 12.33%, #62C7FF 104.82%);
-border-radius: 39px;
+ background: #357266;
+border-radius: 10px;
+width: 150px;
 color: white;
 }
+
+.btn-sell-ask {
+  text-decoration: none !important;
+  background: linear-gradient(81.61deg, #C95D37 24.91%, #FF7F52 77.24%);
+  border-radius: 10px;
+  color: white;
+  padding: 15px;
+  border: none;
+      width: 300px;
+}
+
 .btn-create-sell{
-background-color: #F97C4F;
-border-radius: 39px;
+background-color: #F7B267;
+border-radius: 10px;
 color: white;
-width: 100px;
+width: 150px;
 }
+
+.btn-create-ask {
+    background-color: #F27059;
+    border-radius: 10px;
+        width: 150px;
+        color: white;
+  }
+
+
+// Portfolio "Créer un nouveau portfolio" //
+
 .btn-transaction {
   color: #4A4A4A;
   border: 1px solid #4A4A4A;
@@ -134,9 +118,10 @@ width: 100px;
   margin: 25px 25px 10px 15px
 }
 
-.btn-ghost:hover {
-  opacity: 1;
-}
+// .btn-ghost:hover {
+//   opacity: 1;
+// }
+// new collectible "Vendez votre collectible" //
 
 .btn-sell-my-collectible {
   width: 250px;
@@ -163,6 +148,7 @@ width: 100px;
   }
 }
 
+// index collectible "Filtrer" //
 .btn-filter {
   background-color: #038AD4;
   color: white;
