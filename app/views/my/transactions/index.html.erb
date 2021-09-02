@@ -2,8 +2,8 @@
 
 
   <div class="top-cards mb-5">
-    <%= render "shared/my_portfolio" %>
-    <%= render "shared/my_balance" %>
+    <%= render "shared//my_transactions/my_portfolio" %>
+    <%= render "shared/my_transactions/my_balance" %>
   </div>
 
   <div class="container mb-5">
@@ -18,10 +18,10 @@
 
     <div class="tab-content" id="myTabContent">
       <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
-        <%= render 'shared/my_bids' %>
+        <%= render 'shared//my_transactions/my_bids' %>
       </div>
       <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
-        <%= render 'shared/my_asks' %>
+        <%= render 'shared//my_transactions/my_asks' %>
       </div>
     </div>
   </div>
@@ -30,7 +30,7 @@
     <h2 class="subtitle">MES NFTs</h2>
     <p class="paragraphe-subtitle">Retrouvez l'intégralité de vos Nfts dans cette section</p>
       <div class="my-nfts">
-        <%= render 'shared/my_nfts' %>
+        <%= render 'shared//my_transactions/my_nfts' %>
       </div>
   </div>
 

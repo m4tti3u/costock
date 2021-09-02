@@ -1,0 +1,20 @@
+<div class="col-7">
+      <div class="nav-link-show">
+        <%= link_to "Home", "/", class:"text-decoration-none"  %>
+        <p class="px-2"> / </p>
+        <%= link_to "Sneakers", collectibles_path({collectible_filters: {category: "Sneakers"}, commit: "Filtrer"}), class:"text-decoration-none" %>
+        <p class="px-2"> / </p>
+        <%= link_to @collectible.model, collectible_path(@collectible), class:"text-decoration-none"%>
+      </div>
+      <div class="collectible-show-container">
+        <div class="collectible-show-card justify-content-center" >
+          <h1 class="hero-title"> <%= @collectible.model %> </h1>
+          <div class="card card-sneakers">
+            <% @collectible.photos.each_with_index do |photo, index| %>
+              <span style="--i:<%= index %>;"></span>
+              <%= cl_image_tag photo.key %>
+            <% end %>
+          </div>
+        </div>
+      </div>
+    </div>

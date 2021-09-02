@@ -25,32 +25,8 @@
     <h2 class="subtitle">Collectibles disponibles</h2>
   </div>
 
-  <div class="grid-card mt-5 mb-5 ">
-    <div class="card-collectible position-relative">
-      <%= image_tag "image-sneakers-banner.png", class:"card-img"%>
-      <h3 class="card-title"><%= link_to "Sneakers", collectibles_path({collectible_filters: {category: "Sneakers"}, commit: "Filtrer"}), class: "stretched-link text-decoration-none" %></h3>
-    </div>
+  <%= render "shared/home/grid_card_collectibles" %>
 
-    <div class="card-collectible position-relative">
-    <%= image_tag "cardfilter.png", class:"card-img"%>
-      <h3 class="card-title"><%= link_to "Cartes", collectibles_path({collectible_filters: {category: "Cartes"}, commit: "Filtrer"}), class: "stretched-link text-decoration-none" %></h3>
-    </div>
-
-    <div class="card-collectible position-relative">
-    <%= image_tag "watchfilter.png", class:"card-img"%>
-      <h3 class="card-title"><%= link_to "Montres", collectibles_path({collectible_filters: {category: "Montres"}, commit: "Filtrer"}), class: "stretched-link text-decoration-none" %></h3>
-    </div>
-  </div>
-
-  <%
-=begin%>
- <div class="three-ellipses">
-    <div class="first-ellipse">a</div>
-    <div class="second-ellipse little-ellipse">b</div>
-    <div class="third-ellipse little-ellipse">c</div>
-  </div>
-<%
-=end%>
   <div id="what" style="height: 60px">
   </div>
 
@@ -61,61 +37,13 @@
     </div>
   </div>
 
-  <div class="grid-presentation">
-    <div class="grid-card" data-aos="fade-right" data-aos-duration="1000">
-      <%= image_tag "social-biography.png"%>
-      <div class="text-presentation">
-        <h3 class="title-presentation">Créez votre compte</h3>
-        <p class="paragraphe-subtitle">Un compte gratuit vous permettra de nous envoyer tous vos objets et d'avoir accès à tout moment à vos NFT depuis n'importe quel appareil</p>
-        <%= image_tag "ellipse.png", class: "ellipse-img"%>
-      </div>
-    </div>
-
-    <div class="grid-card" data-aos="fade-left" data-aos-duration="1000">
-      <div class="text-presentation-middle">
-        <h3 class="title-presentation">Trouvez les objets collectibles </h3>
-        <p class="paragraphe-subtitle">Choisissez les collectibles qui vous intéresse le plus et pariez à la hausse ou à la baisse !</p>
-      </div>
-      <%= image_tag "profiling.png"%>
-    </div>
-
-
-     <div class="grid-card" data-aos="fade-right" data-aos-duration="1000">
-      <%= image_tag "ellipse.png", class: "ellipse-img ellipse-left"%>
-      <%= image_tag "performance.png"%>
-      <div class="text-presentation">
-        <h3 class="title-presentation">Suivez les échanges </h3>
-        <p class="paragraphe-subtitle">Intéressez-vous aux nouveaux collectibles et restez au courant des dernières tendances en un seul clic !</p>
-      </div>
-    </div>
-
-  </div>
+  <%= render "shared/home/grid_presentation" %>
 
   <div class="container-subtitle">
     <h2 class="subtitle">Nous avons leur soutien</h2>
     <p class="paragraphe-subtitle">Découvrez les avis de nos traders</p>
   </div>
 
-  <div class="grid-card mt-5 mb-3">
-    <div class="card-advice">
-    <%= image_tag "advicel.jpg", class:"advice-avatar"%>
-    <h3 class="job-advice">Fullstack dev de Branches</h3>
-    <h4 class="flex-grow">Luc Laurent</h4>
-    <p class="paragraph-advice">Les animations sont tarpin bien. Mon portefeuille d'actifs est incroyable.</p>
-    </div>
-    <div class="card-advice">
-      <%= image_tag "advicem.jpg", class:"advice-avatar"%>
-      <h3 class="job-advice">PDG de CoStock</h3>
-      <h4 class="flex-grow">Matthieu Assié</h4>
-      <p class="paragraph-advice">Je recommande ce site, j'ai fait des profits assez costoques !!!</p>
-    </div>
-    <div class="card-advice">
-      <%= image_tag "advicet.jpg", class:"advice-avatar"%>
-      <h3 class="job-advice">Manager de Poules</h3>
-      <h4 class="flex-grow">Thibault Fitte-Duval</h4>
-      <p class="paragraph-advice">La page produit est parfaite, aucun problème !</p>
-
-    </div>
-  </div>
+  <%= render "shared/home/grid_card_advices" %>
 
 </div>
