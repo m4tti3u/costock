@@ -154,8 +154,8 @@
 .card-sneakers span {
   position: absolute;
   top: 0;
-  left: calc(100% / 7 * var(--i));
-  width: calc(100% / 7);
+  left: calc(100% / 36 * var(--i));
+  width: calc(100% / 36);
   height: 100%;
 }
 .card-sneakers img {
