@@ -179,3 +179,20 @@
     justify-content: space-around;
     align-items: center;
 }
+
+.nft-category-card{
+  display: -webkit-inline-box;
+  padding: inherit;
+  margin: 15px 15px 0px 1px;
+  align-items: center;
+}
+
+
+.top-cards {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.collectible-show-card{
+  border-radius: 30px;
+}
