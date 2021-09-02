@@ -1,0 +1,16 @@
+<div class="grid-card mt-5 mb-5 ">
+  <div class="card-collectible position-relative">
+    <%= image_tag "image-sneakers-banner.png", class:"card-img"%>
+    <h3 class="card-title"><%= link_to "Sneakers", collectibles_path({collectible_filters: {category: "Sneakers"}, commit: "Filtrer"}), class: "stretched-link text-decoration-none" %></h3>
+  </div>
+
+  <div class="card-collectible position-relative">
+  <%= image_tag "cardfilter.png", class:"card-img"%>
+    <h3 class="card-title"><%= link_to "Cartes", collectibles_path({collectible_filters: {category: "Cartes"}, commit: "Filtrer"}), class: "stretched-link text-decoration-none" %></h3>
+  </div>
+
+  <div class="card-collectible position-relative">
+  <%= image_tag "watchfilter.png", class:"card-img"%>
+    <h3 class="card-title"><%= link_to "Montres", collectibles_path({collectible_filters: {category: "Montres"}, commit: "Filtrer"}), class: "stretched-link text-decoration-none" %></h3>
+  </div>
+</div>
