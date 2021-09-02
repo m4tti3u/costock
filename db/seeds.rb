@@ -17,6 +17,11 @@ users = User.create!([
   { first_name: 'Jean-Louis', last_name: 'Proprio', username: 'JPP', email: 'jpp@gmail.com', password: 'azerty'},
   { first_name: 'Pierre', last_name: 'Clouté-Cazalaa', username: 'Kazalaa', email: 'pierre@gmail.com', password: 'azerty'},
   { first_name: 'Matthieu', last_name: 'Assié', username: 'm4tti3u', email: 'matt@gmail.com', password: 'azerty'},
+  { first_name: 'Jean', last_name: 'Jean', username: 'j4ano', email: 'jean@gmail.com', password: 'azerty'},
+  { first_name: 'Marc', last_name: 'Marc', username: 'Marco', email: 'marc@gmail.com', password: 'azerty'},
+  { first_name: 'Toto', last_name: 'Toto', username: 'Toto', email: 'toto@gmail.com', password: 'azerty'},
+  { first_name: 'Henri', last_name: 'Henri', username: 'HANRI', email: 'henri@gmail.com', password: 'azerty'},
+  { first_name: 'Louis', last_name: 'Louis', username: 'Lolo', email: 'lolo@gmail.com', password: 'azerty'},
   ])
   puts User.last.id
 
@@ -63,22 +68,22 @@ collectible3.photos.attach(io: photo8, filename: 'jordanog8.jpg', content_type: 
 collectible3.photos.attach(io: photo9, filename: 'jordanog9.jpg', content_type: 'image/jpg')
 collectible3.save
 
-collectible4 = Collectible.create!(category: 'Cartes', brand: 'Pokemon', model: 'Dracofeu 1st ed.', reference: 'PK-DCF-1ST-PGA10', retail_price: 1.0, resell_value: 500000.0, description: 'Une carte mythique pour toutes les générations fans de Pokemon dans un état immaculé', nft_number: 10000, user_id: '3')
+collectible4 = Collectible.create!(category: 'Cartes', brand: 'Pokemon', model: 'Dracofeu 1st ed.', reference: 'PK-DCF-1ST-PGA10', retail_price: 1.0, resell_value: 500 000.0, description: 'Une carte mythique pour toutes les générations fans de Pokemon dans un état immaculé', nft_number: 10000, user_id: '3')
 file4 = URI.open('https://fr.shopping.rakuten.com/photo/1115542299.jpg')
 collectible4.photos.attach(io: file4, filename: 'dracofeu.jpg', content_type: 'image/jpg')
 collectible4.save
 
-collectible5 = Collectible.create!(category: 'Cartes', brand: 'Pokemon', model: 'Blastoise 1st ed.', reference: 'PK-BST-1ST-PGA8.5', retail_price: 1.0, resell_value: 12408.0, description: 'Une carte mythique pour toutes les générations fans de Pokemon dans un état immaculé', nft_number: 1000, user_id: '3')
+collectible5 = Collectible.create!(category: 'Cartes', brand: 'Pokemon', model: 'Blastoise 1st ed.', reference: 'PK-BST-1ST-PGA8.5', retail_price: 1.0, resell_value: 12400.0, description: 'Une carte mythique pour toutes les générations fans de Pokemon dans un état immaculé', nft_number: 1000, user_id: '3')
 file5 = URI.open('https://images.stockx.com/images/Blastoise-Holo-1999-Pokemon-Base-Set-1st-Edition-2-102-PSA.jpg?fit=fill&bg=FFFFFF&w=480&h=320&auto=compress&q=90&dpr=1&trim=color&updated_at=1620851076&pad=0&fm=webp')
 collectible5.photos.attach(io: file5, filename: 'blastoise.jpg', content_type: 'image/jpg')
 collectible5.save
 
-collectible6 = Collectible.create!(category: 'Cartes', brand: 'Panini Revolution', model: 'Infinite Holo KB', reference: 'PZ-KB-HOLO', retail_price: 10.0, resell_value: 18090.1, description: 'Une carte magnifique', nft_number: 1000, user_id: '3')
+collectible6 = Collectible.create!(category: 'Cartes', brand: 'Panini Revolution', model: 'Infinite Holo KB', reference: 'PZ-KB-HOLO', retail_price: 10.0, resell_value: 18100.0, description: 'Une carte magnifique', nft_number: 1000, user_id: '3')
 file6 = URI.open('https://www.picclickimg.com/d/l400/pict/334066054028_/2019-panini-Prizm-Kobe-Bryant-GAME-USED-jersey.jpg')
 collectible6.photos.attach(io: file6, filename: 'kobe.jpg', content_type: 'image/jpg')
 collectible6.save
 
-collectible7 = Collectible.create!(category: 'Cartes', brand: 'Pokemon', model: 'Booster Pack 1st ed.', reference: 'PK-BSTR-1ST', retail_price: 19.0, resell_value: 488.9, description: 'Un paquet de cartes Pokemon dans un état immaculé', nft_number: 100, user_id: '3')
+collectible7 = Collectible.create!(category: 'Cartes', brand: 'Pokemon', model: 'Booster Pack 1st ed.', reference: 'PK-BSTR-1ST', retail_price: 19.0, resell_value: 500.0, description: 'Un paquet de cartes Pokemon dans un état immaculé', nft_number: 100, user_id: '3')
 file7 = URI.open('https://www.play-in.com/img/product/l/pokemon_set_de_base_edition_1_booster_florizarre_fr.webp')
 collectible7.photos.attach(io: file7, filename: 'boosterpack.jpg', content_type: 'image/jpg')
 collectible7.save
@@ -93,10 +98,20 @@ file9 = URI.open('https://images.stockx.com/images/Audemars-Piguet-Royal-Oak-265
 collectible9.photos.attach(io: file9, filename: 'audemarspiguet.jpg', content_type: 'image/jpg')
 collectible9.save
 
-collectible10 = Collectible.create!(category: 'Montres', brand: 'Patek Philippe', model: 'Nautilus', reference: 'PP-NTLS-2019', retail_price: 40000.0, resell_value: 99000.9, description: "Conçu à l’origine en 1976, le Nautilus a très peu changé au fil des ans. L’affaire est toujours bridé ensemble par les épinglés « oreilles », inspirés par les charnières sur les hublots. Il dispose encore d’autres traits de la bien-aimée de conception trop : la lunette aux multiples facettes ; le cadran simple, gravé ; l’intégré, s’effilant bracelet ; et un profil mince, souvent négligée par les concepteurs modernes. Le Nautilus est à peu près aussi bon que get montres de sport et provient de l’un des plus célèbres horlogers dans le monde. Ce modèle exquis dispose d’une complication chronographe frappante qui affiche les minutes et les heures sur un seul « monocounter » à 06:00.", nft_number: 10000, user_id: '3')
+collectible10 = Collectible.create!(category: 'Montres', brand: 'Patek Philippe', model: 'Nautilus', reference: 'PP-NTLS-2019', retail_price: 40000.0, resell_value: 99000.0, description: "Conçu à l’origine en 1976, le Nautilus a très peu changé au fil des ans. L’affaire est toujours bridé ensemble par les épinglés « oreilles », inspirés par les charnières sur les hublots. Il dispose encore d’autres traits de la bien-aimée de conception trop : la lunette aux multiples facettes ; le cadran simple, gravé ; l’intégré, s’effilant bracelet ; et un profil mince, souvent négligée par les concepteurs modernes. Le Nautilus est à peu près aussi bon que get montres de sport et provient de l’un des plus célèbres horlogers dans le monde. Ce modèle exquis dispose d’une complication chronographe frappante qui affiche les minutes et les heures sur un seul « monocounter » à 06:00.", nft_number: 10000, user_id: '3')
 file10 = URI.open('https://images.stockx.com/images/Patek-Philippe-Nautilus-57121A-Blue-front.jpg?fit=fill&bg=FFFFFF&w=480&h=320&auto=compress&q=90&dpr=1&trim=color&updated_at=1610644436&pad=0&fm=webp')
 collectible10.photos.attach(io: file10, filename: 'patekphilippe.jpg', content_type: 'image/jpg')
 collectible10.save
+
+collectible11 = Collectible.create!(category: 'Montres', brand: 'Rolex', model: 'Day-Date Diamant', reference: 'RO-DDD-2002', retail_price: 13000.0, resell_value: 22000, description: "L'imperméabilité, la précision, le bon fonctionnement et l'état de cette Rolex ont été minutieusement inspectés afin de déterminer le degré de remise en état requis pour répondre à nos normes strictes. Nous avons également étudié sa documentation technique et les archives du fabricant, quand cela s'est avéré possible, afin de garantir l'authenticité de la montre et son passé irréprochable. Pour votre tranquillité d'esprit, toutes nos montres s'accompagnent d'une garantie de 24 mois.", nft_number: 1000, user_id: '3')
+file11 = URI.open('https://images.watchfinder.co.uk/imgv2/stock/161511/Rolex-Day-Date-118239-161511-2-200323-154833.jpg;quality=55;h=850')
+collectible10.photos.attach(io: file11, filename: 'rolexdd.jpg', content_type: 'image/jpg')
+collectible10.save
+
+collectible12 = Collectible.create!(category: 'Sneakers', brand: 'Nike', model: 'AF1 OW', reference: 'NI-AF1-OWUG', retail_price: 190.0, resell_value: 1540.0, description: "La dernière paire de la collaboration entre Nike et Virgil Abloh à l'occasion de l'exposition Figure of Speech", nft_number: 100, user_id: '3')
+file12 = URI.open('https://images.stockx.com/images/Nike-Air-Force-1-Low-OFF-WHITE-University-Gold-Metallic-Silver-Product.jpg?fit=fill&bg=FFFFFF&w=140&h=90&auto=compress&trim=color&q=90&dpr=2&updated_at=1625843929&fm=webp')
+collectible2.photos.attach(io: file12, filename: 'af1.png', content_type: 'image/png')
+collectible2.save
 
 puts 'collectivles ok'
 
@@ -105,6 +120,8 @@ nfts = Nft.create!([
   { collectible_id: '1', introduction_price: 2.5, current_price: 2.5, user_id: "3" },
   { collectible_id: '1', introduction_price: 2.5, current_price: 2.5, user_id: "3" },
   { collectible_id: '1', introduction_price: 2.5, current_price: 2.5, user_id: "3" },
+  { collectible_id: '1', introduction_price: 2.5, current_price: 2.5, user_id: "3" },
+  { collectible_id: '2', introduction_price: 5.5, current_price: 5.5, user_id: "3" },
   { collectible_id: '2', introduction_price: 5.5, current_price: 5.5, user_id: "3" },
   { collectible_id: '2', introduction_price: 5.5, current_price: 5.5, user_id: "3" },
   { collectible_id: '2', introduction_price: 5.5, current_price: 5.5, user_id: "3" },
@@ -115,6 +132,8 @@ nfts = Nft.create!([
   { collectible_id: '3', introduction_price: 5.8, current_price: 5.8, user_id: "3" },
   { collectible_id: '3', introduction_price: 5.8, current_price: 5.8, user_id: "3" },
   { collectible_id: '3', introduction_price: 5.8, current_price: 5.8, user_id: "3" },
+  { collectible_id: '3', introduction_price: 5.8, current_price: 5.8, user_id: "3" },
+  { collectible_id: '4', introduction_price: 6.0, current_price: 6.0, user_id: "3" },
   { collectible_id: '4', introduction_price: 6.0, current_price: 6.0, user_id: "3" },
   { collectible_id: '4', introduction_price: 6.0, current_price: 6.0, user_id: "3" },
   { collectible_id: '4', introduction_price: 6.0, current_price: 6.0, user_id: "3" },
@@ -125,6 +144,8 @@ nfts = Nft.create!([
   { collectible_id: '5', introduction_price: 1.3, current_price: 1.3, user_id: "3" },
   { collectible_id: '5', introduction_price: 1.3, current_price: 1.3, user_id: "3" },
   { collectible_id: '5', introduction_price: 1.3, current_price: 1.3, user_id: "3" },
+  { collectible_id: '5', introduction_price: 1.3, current_price: 1.3, user_id: "3" },
+  { collectible_id: '6', introduction_price: 1.9, current_price: 1.9, user_id: "3" },
   { collectible_id: '6', introduction_price: 1.9, current_price: 1.9, user_id: "3" },
   { collectible_id: '6', introduction_price: 1.9, current_price: 1.9, user_id: "3" },
   { collectible_id: '6', introduction_price: 1.9, current_price: 1.9, user_id: "3" },
@@ -135,11 +156,14 @@ nfts = Nft.create!([
   { collectible_id: '7', introduction_price: 5.0, current_price: 5.0, user_id: "3" },
   { collectible_id: '7', introduction_price: 5.0, current_price: 5.0, user_id: "3" },
   { collectible_id: '7', introduction_price: 5.0, current_price: 5.0, user_id: "3" },
+  { collectible_id: '7', introduction_price: 5.0, current_price: 5.0, user_id: "3" },
   { collectible_id: '8', introduction_price: 2.1, current_price: 2.1, user_id: "3" },
   { collectible_id: '8', introduction_price: 2.1, current_price: 2.1, user_id: "3" },
   { collectible_id: '8', introduction_price: 2.1, current_price: 2.1, user_id: "3" },
   { collectible_id: '8', introduction_price: 2.1, current_price: 2.1, user_id: "3" },
   { collectible_id: '8', introduction_price: 2.1, current_price: 2.1, user_id: "3" },
+  { collectible_id: '8', introduction_price: 2.1, current_price: 2.1, user_id: "3" },
+  { collectible_id: '9', introduction_price: 6.5, current_price: 6.5, user_id: "3" },
   { collectible_id: '9', introduction_price: 6.5, current_price: 6.5, user_id: "3" },
   { collectible_id: '9', introduction_price: 6.5, current_price: 6.5, user_id: "3" },
   { collectible_id: '9', introduction_price: 6.5, current_price: 6.5, user_id: "3" },
@@ -149,58 +173,78 @@ nfts = Nft.create!([
   { collectible_id: '10', introduction_price: 10.0, current_price: 10.0, user_id: "3" },
   { collectible_id: '10', introduction_price: 10.0, current_price: 10.0, user_id: "3" },
   { collectible_id: '10', introduction_price: 10.0, current_price: 10.0, user_id: "3" },
-  { collectible_id: '10', introduction_price: 10.0, current_price: 10.0, user_id: "3" }
+  { collectible_id: '10', introduction_price: 10.0, current_price: 10.0, user_id: "3" },
+  { collectible_id: '11', introduction_price: 2.0, current_price: 3.0, user_id: "3" }
+  { collectible_id: '11', introduction_price: 2.0, current_price: 3.0, user_id: "3" }
+  { collectible_id: '11', introduction_price: 2.0, current_price: 3.0, user_id: "3" }
+  { collectible_id: '11', introduction_price: 2.0, current_price: 3.0, user_id: "3" }
+  { collectible_id: '11', introduction_price: 2.0, current_price: 3.0, user_id: "3" }
+  { collectible_id: '12', introduction_price: 3.0, current_price: 3.0, user_id: "3" }
+  { collectible_id: '12', introduction_price: 3.0, current_price: 3.0, user_id: "3" }
+  { collectible_id: '12', introduction_price: 3.0, current_price: 3.0, user_id: "3" }
+  { collectible_id: '12', introduction_price: 3.0, current_price: 3.0, user_id: "3" }
+  { collectible_id: '12', introduction_price: 3.0, current_price: 3.0, user_id: "3" }
+  { collectible_id: '12', introduction_price: 3.0, current_price: 3.0, user_id: "3" }
   ])
 
-puts 'All good investors!'
 
-Bid.create!([
+  Bid.create!([
   {collectible_id: "1", user_id: "1", bid_price: 1},
-  {collectible_id: "2", user_id: "1", bid_price: 2},
-  {collectible_id: "3", user_id: "1", bid_price: 3},
-  {collectible_id: "4", user_id: "1", bid_price: 1},
-  {collectible_id: "5", user_id: "1", bid_price: 2},
-  {collectible_id: "6", user_id: "1", bid_price: 3},
-  {collectible_id: "7", user_id: "1", bid_price: 1},
-  {collectible_id: "8", user_id: "1", bid_price: 2},
-  {collectible_id: "9", user_id: "1", bid_price: 3},
-  {collectible_id: "10", user_id: "1", bid_price: 1},
-  {collectible_id: "1", user_id: "1", bid_price: 2},
-  {collectible_id: "2", user_id: "1", bid_price: 3},
+  {collectible_id: "2", user_id: "2", bid_price: 1},
+  {collectible_id: "3", user_id: "4", bid_price: 1},
+  {collectible_id: "4", user_id: "5", bid_price: 1},
+  {collectible_id: "5", user_id: "6", bid_price: 1},
+  {collectible_id: "6", user_id: "7", bid_price: 1},
+  {collectible_id: "7", user_id: "8", bid_price: 1},
+  {collectible_id: "8", user_id: "1", bid_price: 1},
+  {collectible_id: "9", user_id: "2", bid_price: 1},
+  {collectible_id: "10", user_id: "4", bid_price: 1},
+  {collectible_id: "11", user_id: "5", bid_price: 1},
+  {collectible_id: "12", user_id: "6", bid_price: 1},
+  {collectible_id: "1", user_id: "7", bid_price: 1},
+  {collectible_id: "2", user_id: "8", bid_price: 1},
   {collectible_id: "3", user_id: "1", bid_price: 1},
-  {collectible_id: "4", user_id: "1", bid_price: 2},
-  {collectible_id: "5", user_id: "1", bid_price: 3},
-  {collectible_id: "6", user_id: "1", bid_price: 1},
-  {collectible_id: "7", user_id: "1", bid_price: 2},
-  {collectible_id: "8", user_id: "1", bid_price: 3},
-  {collectible_id: "9", user_id: "1", bid_price: 1},
-  {collectible_id: "10", user_id: "1", bid_price: 8},
+  {collectible_id: "4", user_id: "2", bid_price: 1},
+  {collectible_id: "5", user_id: "4", bid_price: 1},
+  {collectible_id: "6", user_id: "5", bid_price: 1},
+  {collectible_id: "7", user_id: "6", bid_price: 1},
+  {collectible_id: "8", user_id: "7", bid_price: 1},
+  {collectible_id: "9", user_id: "8", bid_price: 1},
+  {collectible_id: "10", user_id: "1", bid_price: 1},
+  {collectible_id: "11", user_id: "2", bid_price: 1},
+  {collectible_id: "12", user_id: "4", bid_price: 1},
   ])
 
-Ask.create!([
-  {collectible_id: "1", user_id: "3", ask_price: 5},
-  {collectible_id: "2", user_id: "3", ask_price: 5},
-  {collectible_id: "3", user_id: "3", ask_price: 5},
-  {collectible_id: "4", user_id: "3", ask_price: 5},
-  {collectible_id: "5", user_id: "3", ask_price: 5},
-  {collectible_id: "6", user_id: "3", ask_price: 5},
-  {collectible_id: "7", user_id: "3", ask_price: 5},
-  {collectible_id: "8", user_id: "3", ask_price: 5},
-  {collectible_id: "9", user_id: "3", ask_price: 5},
-  {collectible_id: "10", user_id: "3", ask_price: 5},
-  {collectible_id: "1", user_id: "3", ask_price: 6},
-  {collectible_id: "2", user_id: "3", ask_price: 6},
-  {collectible_id: "3", user_id: "3", ask_price: 6},
-  {collectible_id: "4", user_id: "3", ask_price: 6},
-  {collectible_id: "5", user_id: "3", ask_price: 6},
-  {collectible_id: "6", user_id: "3", ask_price: 6},
-  {collectible_id: "7", user_id: "3", ask_price: 6},
-  {collectible_id: "8", user_id: "3", ask_price: 6},
-  {collectible_id: "9", user_id: "3", ask_price: 6},
-  {collectible_id: "10", user_id: "3", ask_price: 6},
-  {collectible_id: "1", user_id: "3", ask_price: 7},
-  {collectible_id: "2", user_id: "3", ask_price: 7},
-  {collectible_id: "3", user_id: "3", ask_price: 7},
-  {collectible_id: "4", user_id: "3", ask_price: 7},
-  {collectible_id: "5", user_id: "3", ask_price: 7},
+  Ask.create!([
+    {collectible_id: "1", user_id: "3", ask_price: 2},
+    {collectible_id: "2", user_id: "3", ask_price: 2},
+    {collectible_id: "3", user_id: "3", ask_price: 2},
+    {collectible_id: "4", user_id: "3", ask_price: 2},
+    {collectible_id: "5", user_id: "3", ask_price: 2},
+    {collectible_id: "6", user_id: "3", ask_price: 2},
+    {collectible_id: "7", user_id: "3", ask_price: 2},
+    {collectible_id: "8", user_id: "3", ask_price: 2},
+    {collectible_id: "9", user_id: "3", ask_price: 2},
+    {collectible_id: "10", user_id: "3", ask_price: 2},
+    {collectible_id: "11", user_id: "3", ask_price: 2},
+    {collectible_id: "12", user_id: "3", ask_price: 2},
+    {collectible_id: "1", user_id: "3", ask_price: 2},
+    {collectible_id: "2", user_id: "3", ask_price: 2},
+    {collectible_id: "3", user_id: "3", ask_price: 2},
+    {collectible_id: "4", user_id: "3", ask_price: 2},
+    {collectible_id: "5", user_id: "3", ask_price: 2},
+    {collectible_id: "6", user_id: "3", ask_price: 2},
+    {collectible_id: "7", user_id: "3", ask_price: 2},
+    {collectible_id: "8", user_id: "3", ask_price: 2},
+    {collectible_id: "9", user_id: "3", ask_price: 2},
+    {collectible_id: "10", user_id: "3", ask_price: 2},
+    {collectible_id: "11", user_id: "3", ask_price: 2},
+    {collectible_id: "12", user_id: "3", ask_price: 2},
+    {collectible_id: "1", user_id: "3", ask_price: 2},
+    {collectible_id: "2", user_id: "3", ask_price: 2},
+    {collectible_id: "3", user_id: "3", ask_price: 2},
+    {collectible_id: "4", user_id: "3", ask_price: 2},
+    {collectible_id: "5", user_id: "3", ask_price: 2},
   ])
+
+  puts 'All good investors!'
