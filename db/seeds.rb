@@ -174,16 +174,16 @@ nfts = Nft.create!([
   { collectible_id: '10', introduction_price: 10.0, current_price: 10.0, user_id: "3" },
   { collectible_id: '10', introduction_price: 10.0, current_price: 10.0, user_id: "3" },
   { collectible_id: '10', introduction_price: 10.0, current_price: 10.0, user_id: "3" },
-  { collectible_id: '11', introduction_price: 2.0, current_price: 3.0, user_id: "3" }
-  { collectible_id: '11', introduction_price: 2.0, current_price: 3.0, user_id: "3" }
-  { collectible_id: '11', introduction_price: 2.0, current_price: 3.0, user_id: "3" }
-  { collectible_id: '11', introduction_price: 2.0, current_price: 3.0, user_id: "3" }
-  { collectible_id: '11', introduction_price: 2.0, current_price: 3.0, user_id: "3" }
-  { collectible_id: '12', introduction_price: 3.0, current_price: 3.0, user_id: "3" }
-  { collectible_id: '12', introduction_price: 3.0, current_price: 3.0, user_id: "3" }
-  { collectible_id: '12', introduction_price: 3.0, current_price: 3.0, user_id: "3" }
-  { collectible_id: '12', introduction_price: 3.0, current_price: 3.0, user_id: "3" }
-  { collectible_id: '12', introduction_price: 3.0, current_price: 3.0, user_id: "3" }
+  { collectible_id: '11', introduction_price: 2.0, current_price: 3.0, user_id: "3" },
+  { collectible_id: '11', introduction_price: 2.0, current_price: 3.0, user_id: "3" },
+  { collectible_id: '11', introduction_price: 2.0, current_price: 3.0, user_id: "3" },
+  { collectible_id: '11', introduction_price: 2.0, current_price: 3.0, user_id: "3" },
+  { collectible_id: '11', introduction_price: 2.0, current_price: 3.0, user_id: "3" },
+  { collectible_id: '12', introduction_price: 3.0, current_price: 3.0, user_id: "3" },
+  { collectible_id: '12', introduction_price: 3.0, current_price: 3.0, user_id: "3" },
+  { collectible_id: '12', introduction_price: 3.0, current_price: 3.0, user_id: "3" },
+  { collectible_id: '12', introduction_price: 3.0, current_price: 3.0, user_id: "3" },
+  { collectible_id: '12', introduction_price: 3.0, current_price: 3.0, user_id: "3" },
   { collectible_id: '12', introduction_price: 3.0, current_price: 3.0, user_id: "3" }
   ])
 
