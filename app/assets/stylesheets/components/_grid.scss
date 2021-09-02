@@ -17,3 +17,12 @@
   grid-gap: 30px;
   margin-bottom: 100px;
 }
+
+.grid-show-product{
+  display: grid;
+  grid-template-columns: 800px 1fr;
+}
+
+.second-line {
+  margin-left: 80px;
+}

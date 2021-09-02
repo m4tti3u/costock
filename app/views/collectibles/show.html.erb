@@ -18,15 +18,7 @@
               <%= cl_image_tag photo.key %>
             <% end %>
           </div>
-          <div class="description-product"></div>
-          <div class="description-product-title mb-5">
-            <h3>Description Produit</h3>
-            </div>
-              <p class="description-show-titles">Marque : <span class="description-show-details"> <%= @collectible.brand %> </span></p>
-              <p class="description-show-titles"> Description : <span class="description-show-details">  <%= @collectible.description %> </span></p>
-              <p class="description-show-titles">Prix initial : <span class="description-show-details"><%= @collectible.retail_price %> €</span></p>
-              <p class="description-show-titles">Prix de détail : <span class="description-show-details"><%= @collectible.resell_value %> €</span></p>
-              <p class="description-show-titles">Nombre de NFTs : <span class="description-show-details"><%= @collectible.nft_number %></span> </p>
+
 
             </div>
           </div>
@@ -168,7 +160,24 @@
         </div>
       <% end %>
     </div>
-  </div>
+  </div>    <div class="line"></div>
+            <div class="description-product-title mb-5">
+            <h3>Description Produit</h3>
+            </div>
+              <div class="grid-show-product">
+
+              <div class="first-line">
+                <p class="description-show-titles">Marque : <span class="description-show-details"> <%= @collectible.brand %> </span></p>
+                <p class="description-show-titles"> Model : <span class="description-show-details">  <%= @collectible.model %> </span></p>
+                <p class="description-show-titles"> Description : <span class="description-show-details">  <%= @collectible.description %> </span></p>
+              </div>
+              <div class="second-line">
+                <p class="description-show-titles">Prix initial : <span class="description-show-details"><%= @collectible.retail_price %> €</span></p>
+                <p class="description-show-titles">Prix de détail : <span class="description-show-details"><%= @collectible.resell_value %> €</span></p>
+                <p class="description-show-titles">Nombre de NFTs : <span class="description-show-details"><%= @collectible.nft_number %></span> </p>
+              </div>
+              </div>
+
   <div class="line"></div>
   <div class="description-product-title">
     <h3 class="mb-5">Historique des prix</h3>
