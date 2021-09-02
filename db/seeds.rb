@@ -105,13 +105,13 @@ collectible10.save
 
 collectible11 = Collectible.create!(category: 'Montres', brand: 'Rolex', model: 'Day-Date Diamant', reference: 'RO-DDD-2002', retail_price: 13000.0, resell_value: 22000, description: "L'imperméabilité, la précision, le bon fonctionnement et l'état de cette Rolex ont été minutieusement inspectés afin de déterminer le degré de remise en état requis pour répondre à nos normes strictes. Nous avons également étudié sa documentation technique et les archives du fabricant, quand cela s'est avéré possible, afin de garantir l'authenticité de la montre et son passé irréprochable. Pour votre tranquillité d'esprit, toutes nos montres s'accompagnent d'une garantie de 24 mois.", nft_number: 1000, user_id: '3')
 file11 = URI.open('https://images.watchfinder.co.uk/imgv2/stock/161511/Rolex-Day-Date-118239-161511-2-200323-154833.jpg;quality=55;h=850')
-collectible10.photos.attach(io: file11, filename: 'rolexdd.jpg', content_type: 'image/jpg')
-collectible10.save
+collectible11.photos.attach(io: file11, filename: 'rolexdd.jpg', content_type: 'image/jpg')
+collectible11.save
 
 collectible12 = Collectible.create!(category: 'Sneakers', brand: 'Nike', model: 'AF1 OW', reference: 'NI-AF1-OWUG', retail_price: 190.0, resell_value: 1540.0, description: "La dernière paire de la collaboration entre Nike et Virgil Abloh à l'occasion de l'exposition Figure of Speech", nft_number: 100, user_id: '3')
 file12 = URI.open('https://images.stockx.com/images/Nike-Air-Force-1-Low-OFF-WHITE-University-Gold-Metallic-Silver-Product.jpg?fit=fill&bg=FFFFFF&w=140&h=90&auto=compress&trim=color&q=90&dpr=2&updated_at=1625843929&fm=webp')
-collectible2.photos.attach(io: file12, filename: 'af1.png', content_type: 'image/png')
-collectible2.save
+collectible12.photos.attach(io: file12, filename: 'af1.jpg', content_type: 'image/jpg')
+collectible12.save
 
 puts 'collectivles ok'
 
