@@ -68,7 +68,7 @@ collectible3.photos.attach(io: photo8, filename: 'jordanog8.jpg', content_type: 
 collectible3.photos.attach(io: photo9, filename: 'jordanog9.jpg', content_type: 'image/jpg')
 collectible3.save
 
-collectible4 = Collectible.create!(category: 'Cartes', brand: 'Pokemon', model: 'Dracofeu 1st ed.', reference: 'PK-DCF-1ST-PGA10', retail_price: 1.0, resell_value: 500 000.0, description: 'Une carte mythique pour toutes les générations fans de Pokemon dans un état immaculé', nft_number: 10000, user_id: '3')
+collectible4 = Collectible.create!(category: 'Cartes', brand: 'Pokemon', model: 'Dracofeu 1st ed.', reference: 'PK-DCF-1ST-PGA10', retail_price: 1.0, resell_value: 500000.0, description: 'Une carte mythique pour toutes les générations fans de Pokemon dans un état immaculé', nft_number: 10000, user_id: '3')
 file4 = URI.open('https://fr.shopping.rakuten.com/photo/1115542299.jpg')
 collectible4.photos.attach(io: file4, filename: 'dracofeu.jpg', content_type: 'image/jpg')
 collectible4.save
