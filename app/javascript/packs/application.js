@@ -26,6 +26,7 @@ require("channels")
 import "bootstrap";
 import "chartkick/chart.js";
 import AOS from "aos";
+import 'aos/dist/aos.css';
 
 // Internal imports, e.g:
 import { initSelect2 } from '../components/init_select2';
@@ -35,12 +36,11 @@ import { changeNavbarOnScroll } from '../components/change_navbar';
 
 import { scrollDownWithChevron } from '../components/chevron_scroll';
 
-
 document.addEventListener('turbolinks:load', () => {
   // Call your functions here, e.g:
+  AOS.init();
   initSelect2();
   changeNavbarOnScroll();
-  AOS.init();
   scrollDownWithChevron();
   // switchBidAsk();
   // console.log(document.querySelector("#new_collectible"));
@@ -51,5 +51,4 @@ document.addEventListener('turbolinks:load', () => {
   //     document.getElementById("brand-personnalise").classList.remove("d-none");
   //   };
   // });
-
 });
