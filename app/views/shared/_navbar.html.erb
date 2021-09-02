@@ -22,7 +22,7 @@
       <% if user_signed_in? %>
         <li class="nav-item-avatar dropdown">
           <% if current_user.photo.attached? %>
-            <%= cl_image_tag current_user.photos.key, height: 40, width: 40, crop: :fill , class: "avatar dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
+            <%= cl_image_tag current_user.photo.key, height: 40, width: 40, crop: :fill , class: "avatar dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
           <% else %>
             <%= cl_image_tag "matthieu_lloqq1", height: 40, width: 40, class: "avatar dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
           <% end %>

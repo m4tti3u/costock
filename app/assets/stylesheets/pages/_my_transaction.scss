@@ -36,9 +36,9 @@
   align-items: center;
   margin: 6px;
 
-  .portfolio:hover {
+  &:hover {
   background: rgb(240, 240, 240);
-}
+  }
 
   P {
     margin: 0;
